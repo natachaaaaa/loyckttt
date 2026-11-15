@@ -312,9 +312,9 @@
     "semantic_hash": ""
   },
   "src/content/business.json": {
-    "mtime": 1794735440.4135253,
-    "seen": 1794735833.1356921,
-    "ast_hash": "6a2c460a832ff48115164ff5bfbbd477",
+    "mtime": 1794735910.0258577,
+    "seen": 1794735931.86774,
+    "ast_hash": "a9ac45d2bb51c7660b3855baf6e43f33",
     "semantic_hash": ""
   },
   "src/entry-server.js": {

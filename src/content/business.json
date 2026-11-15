@@ -1,7 +1,7 @@
 {
   "_comment": "Fiche artiste + salon : alimente les données structurées (Google), le pied de page, les infos pratiques et les balises. Un champ vide n'est PAS publié. Le nom, l'adresse et le téléphone du salon doivent être IDENTIQUES (au caractère près) à la fiche Google Business Profile du salon.",
 
-  "siteUrl": "",
+  "siteUrl": "https://loyckttt.fr",
 
   "artist": {
     "name": "Loyck",
