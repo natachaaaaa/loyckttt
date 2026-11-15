@@ -13,11 +13,12 @@ export const CONFIG = {
   horizonMonths: 4, // how far ahead the calendar opens
 }
 
-const env = import.meta.env ?? {}
-const GCAL_ID = env.VITE_GCAL_ID
-const GCAL_KEY = env.VITE_GCAL_KEY
-const WEB3FORMS_KEY = env.VITE_WEB3FORMS_KEY
-export const CONTACT_EMAIL = env.VITE_CONTACT_EMAIL || 'contact@exemple.fr'
+// One access per variable: reading import.meta.env as a whole would inline every VITE_* value into the site.
+// `?.`: outside Vite (scripts/check-booking.mjs in Node) there is no import.meta.env.
+const GCAL_ID = import.meta.env?.VITE_GCAL_ID
+const GCAL_KEY = import.meta.env?.VITE_GCAL_KEY
+const WEB3FORMS_KEY = import.meta.env?.VITE_WEB3FORMS_KEY
+export const CONTACT_EMAIL = import.meta.env?.VITE_CONTACT_EMAIL || 'contact@exemple.fr'
 
 const DAY = 86400000
 
@@ -77,7 +78,7 @@ export async function fetchBusy(timeMin, timeMax) {
   if (!GCAL_ID || !GCAL_KEY) {
     // shortcut: without a configured calendar, dev shows a few fake taken slots so the UI can be checked;
     // production shows everything free (requests are still validated by hand).
-    return env.DEV ? demoBusy(timeMin) : []
+    return import.meta.env?.DEV ? demoBusy(timeMin) : []
   }
   const res = await fetch(`https://www.googleapis.com/calendar/v3/freeBusy?key=${encodeURIComponent(GCAL_KEY)}`, {
     method: 'POST',
