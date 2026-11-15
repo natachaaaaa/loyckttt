@@ -1,0 +1,99 @@
+{
+  "name": "Home",
+  "slug": "home",
+  "content": {
+    "_uid": "page",
+    "component": "page",
+    "body": [
+      { "_uid": "hero", "component": "hero" },
+      {
+        "_uid": "marquee",
+        "component": "marquee",
+        "tags": "Cybersigilism, Trash, Blackwork, Cyberpunk, Biomécanique, Dotwork"
+      },
+      {
+        "_uid": "about",
+        "component": "about",
+        "title": "Qui suis-je?",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam eros, accumsan a elementum ut, egestas id purus. Nulla velit nibh, tristique a velit ut, gravida dictum nisl. Proin imperdiet euismod ex in iaculis. Aenean id semper quam. Ut quis elit dolor. Sed lectus nibh, condimentum quis odio at, tempus dignissim nulla. Nulla non augue vel arcu tincidunt volutpat vitae consectetur arcu. Nam elementum nunc ut ex laoreet, eget consectetur metus rhoncus.",
+        "portrait": null
+      },
+      { "_uid": "divider-1", "component": "divider" },
+      {
+        "_uid": "works",
+        "component": "works",
+        "title": "Realisations",
+        "items": [
+          { "_uid": "w1", "component": "work", "year": "2025", "image": { "filename": "/works/larve.jpg", "alt": "Larve en dotwork sur un mollet", "width": 1000, "height": 1000 } },
+          { "_uid": "w2", "component": "work", "year": "2025", "image": { "filename": "/works/sceau.jpg", "alt": "Sceau cybersigil symétrique autour d’un œil, sur un mollet", "width": 1000, "height": 1000 } },
+          { "_uid": "w3", "component": "work", "year": "2025", "image": { "filename": "/works/yeux.jpg", "alt": "Ornement filigrane ouvrant trois yeux sur une cuisse", "width": 750, "height": 1000 } },
+          { "_uid": "w4", "component": "work", "year": "2025", "image": { "filename": "/works/epines.jpg", "alt": "Tige épineuse le long d’un avant-bras", "width": 1000, "height": 1000 } },
+          { "_uid": "w5", "component": "work", "year": "2026", "image": { "filename": "/works/crane.jpg", "alt": "Crâne en blackwork entouré de pointes", "width": 750, "height": 1000 } },
+          { "_uid": "w6", "component": "work", "year": "2026", "image": { "filename": "/works/ver.jpg", "alt": "Visage déformé traversé par un ver, aux dents longues", "width": 832, "height": 1000 } },
+          { "_uid": "w7", "component": "work", "year": "2024", "image": { "filename": "/works/ange.jpg", "alt": "Figure ailée anatomique sur un avant-bras", "width": 800, "height": 1000 } },
+          { "_uid": "w8", "component": "work", "year": "2026", "image": { "filename": "/works/ronces.jpg", "alt": "Ronces cybersigil couvrant un bras", "width": 750, "height": 1000 } },
+          { "_uid": "w9", "component": "work", "year": "2026", "image": { "filename": "/works/spectre.jpg", "alt": "Forme spectrale en fumée et texture, sur une jambe", "width": 826, "height": 1000 } }
+        ]
+      },
+      {
+        "_uid": "flashes",
+        "component": "flashes",
+        "kicker": "Pièces uniques",
+        "title": "Flashs disponibles",
+        "intro": "Chaque flash n'est tatoué qu'une seule fois. Taille et emplacement s'ajustent ensemble avant la séance.",
+        "items": [
+          { "_uid": "f1", "component": "flash", "name": "Larve", "size": "~ 12 cm", "taken": false, "image": null },
+          { "_uid": "f2", "component": "flash", "name": "Œil multiple", "size": "~ 8 cm", "taken": false, "image": null },
+          { "_uid": "f3", "component": "flash", "name": "Chrysalide", "size": "~ 15 cm", "taken": true, "image": null },
+          { "_uid": "f4", "component": "flash", "name": "Sceau lunaire", "size": "~ 10 cm", "taken": false, "image": null }
+        ]
+      },
+      { "_uid": "divider-2", "component": "divider" },
+      {
+        "_uid": "process",
+        "component": "process",
+        "kicker": "Étape par étape",
+        "title": "Le déroulé",
+        "steps": [
+          { "_uid": "s1", "component": "step", "title": "La demande", "text": "Écris-moi ton idée, l'emplacement, la taille approximative et quelques références." },
+          { "_uid": "s2", "component": "step", "title": "Le dessin", "text": "Je dessine une pièce unique, pensée pour suivre les lignes et les muscles du corps." },
+          { "_uid": "s3", "component": "step", "title": "L'acompte", "text": "Un acompte confirme le rendez-vous. Il est déduit du prix final." },
+          { "_uid": "s4", "component": "step", "title": "La séance", "text": "Viens reposé·e, après avoir mangé, avec une peau hydratée et sans coup de soleil." }
+        ]
+      },
+      {
+        "_uid": "agenda",
+        "component": "agenda",
+        "kicker": "Sur la route",
+        "title": "Guests & conventions",
+        "events": [
+          { "_uid": "e1", "component": "event", "date": "", "city": "Ville", "place": "Studio invité", "status": "open" },
+          { "_uid": "e2", "component": "event", "date": "", "city": "Ville", "place": "Convention", "status": "open" },
+          { "_uid": "e3", "component": "event", "date": "", "city": "Ville", "place": "Studio invité", "status": "full" },
+          { "_uid": "e4", "component": "event", "date": "", "city": "Ville", "place": "Convention", "status": "soon" }
+        ]
+      },
+      { "_uid": "divider-3", "component": "divider" },
+      {
+        "_uid": "infos",
+        "component": "infos",
+        "kicker": "Avant de venir",
+        "title": "Infos pratiques",
+        "blocks": [
+          { "_uid": "i1", "component": "info", "title": "Tarifs", "lines": "Pièce à partir de XX €\nJournée complète XX €\nAcompte XX €, déduit du total", "note": "Prix établi sur devis : taille, emplacement, niveau de détail." },
+          { "_uid": "i2", "component": "info", "title": "Le studio", "lines": "Adresse à compléter\nVille\nSur rendez-vous uniquement", "note": "Du mardi au samedi." },
+          { "_uid": "i3", "component": "info", "title": "Soins", "lines": "Eau tiède et savon neutre, sans frotter\nCrème en couche fine, deux semaines\nNi soleil, ni bain, ni piscine pendant trois semaines", "note": "Une fiche de soins est remise après chaque séance." }
+        ]
+      },
+      {
+        "_uid": "contact",
+        "component": "contact",
+        "kicker": "Projets ouverts",
+        "title": "Prendre rendez-vous",
+        "text": "Choisis un créneau libre, puis décris ton projet.",
+        "email": "contact@exemple.fr",
+        "instagram": "https://www.instagram.com/loyck.ttt/"
+      }
+    ]
+  }
+}

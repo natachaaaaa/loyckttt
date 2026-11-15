@@ -1,0 +1,302 @@
+{
+  ".claude/launch.json": {
+    "mtime": 1794730005.2456193,
+    "seen": 1794730188.767543,
+    "ast_hash": "578971a150f4ea52a5e17a6f3ae2c3cc",
+    "semantic_hash": ""
+  },
+  ".vscode/extensions.json": {
+    "mtime": 1794729929.251971,
+    "seen": 1794730188.7675478,
+    "ast_hash": "886c161c2f2d9388473a64033e7d1931",
+    "semantic_hash": ""
+  },
+  "package.json": {
+    "mtime": 1794732831.8603284,
+    "seen": 1794732843.458823,
+    "ast_hash": "29cdb768a9b27d6d11da091b8cbfcbdd",
+    "semantic_hash": ""
+  },
+  "scripts/split-logo.mjs": {
+    "mtime": 1794730776.3502812,
+    "seen": 1794730802.340539,
+    "ast_hash": "31e5adb531169b112b276456b006c287",
+    "semantic_hash": ""
+  },
+  "src/App.vue": {
+    "mtime": 1794732587.3514113,
+    "seen": 1794732843.4588292,
+    "ast_hash": "ac02c62ada1fac439ba4e5e8e77f96dc",
+    "semantic_hash": ""
+  },
+  "src/components/AboutSection.vue": {
+    "mtime": 1794732631.2071931,
+    "seen": 1794732843.458831,
+    "ast_hash": "7e1f93e0581300c84c059eab8532ddb2",
+    "semantic_hash": ""
+  },
+  "src/components/TagMarquee.vue": {
+    "mtime": 1794732622.8446145,
+    "seen": 1794732843.458837,
+    "ast_hash": "db2a894b59ea2d57d812ceaf92af2561",
+    "semantic_hash": ""
+  },
+  "src/components/TheFooter.vue": {
+    "mtime": 1794730001.7636104,
+    "seen": 1794730188.767554,
+    "ast_hash": "2470f3f42a9e180502db3cb770508708",
+    "semantic_hash": ""
+  },
+  "src/components/TheHero.vue": {
+    "mtime": 1794732622.8442276,
+    "seen": 1794732843.458838,
+    "ast_hash": "0b46b12cd91b82a88e22d8eecff0bb31",
+    "semantic_hash": ""
+  },
+  "src/components/WorksSection.vue": {
+    "mtime": 1794732673.038998,
+    "seen": 1794732843.4588401,
+    "ast_hash": "9eba4f62b1355fef42a1fefb15197a0a",
+    "semantic_hash": ""
+  },
+  "src/gsap.js": {
+    "mtime": 1794731198.1996274,
+    "seen": 1794731220.652622,
+    "ast_hash": "400e90e080f7385ea15342c57c187795",
+    "semantic_hash": ""
+  },
+  "src/main.js": {
+    "mtime": 1794732601.405155,
+    "seen": 1794732843.458848,
+    "ast_hash": "af2e1ae6c1043c714a5f51758de3d47e",
+    "semantic_hash": ""
+  },
+  "vite.config.js": {
+    "mtime": 1794734114.2349274,
+    "seen": 1794734130.242806,
+    "ast_hash": "420b7948b7f25639ccbc9767903830d4",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1794734123.9508913,
+    "seen": 1794734130.2428071,
+    "ast_hash": "5f3080d0f86723573cc588d449afcf2f",
+    "semantic_hash": ""
+  },
+  "index.html": {
+    "mtime": 1794729960.2689683,
+    "seen": 1794730188.7675588,
+    "ast_hash": "f58da9e3ffaeb734cc15e6424b572ede",
+    "semantic_hash": ""
+  },
+  "public/favicon.svg": {
+    "mtime": 1794729929.2526567,
+    "seen": 1794730188.76756,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "public/icons.svg": {
+    "mtime": 1794729929.2528937,
+    "seen": 1794730188.767561,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "src/assets/logo-letters.svg": {
+    "mtime": 1794730776.7867038,
+    "seen": 1794730802.3405719,
+    "ast_hash": "dc2be0a217a295ac37fc06c2248d6426",
+    "semantic_hash": ""
+  },
+  "src/assets/logo-roots.svg": {
+    "mtime": 1794730776.787116,
+    "seen": 1794730802.340574,
+    "ast_hash": "8ea1f3d8bbb49c62452fdb85ddf05884",
+    "semantic_hash": ""
+  },
+  "src/components/AgendaSection.vue": {
+    "mtime": 1794732692.1492786,
+    "seen": 1794732843.458831,
+    "ast_hash": "55b8dc7a1cccbaaeaa17a27e473d4b61",
+    "semantic_hash": ""
+  },
+  "src/components/ContactSection.vue": {
+    "mtime": 1794732692.1507075,
+    "seen": 1794732843.458833,
+    "ast_hash": "f2522e6e097769195fc23c9959e1bd08",
+    "semantic_hash": ""
+  },
+  "src/components/FlashSection.vue": {
+    "mtime": 1794732660.66415,
+    "seen": 1794732843.458834,
+    "ast_hash": "adce73b0f2a1da43df78e778e2e9873c",
+    "semantic_hash": ""
+  },
+  "src/components/InfosSection.vue": {
+    "mtime": 1794732692.1496131,
+    "seen": 1794732843.458835,
+    "ast_hash": "225ef55ddf32a4878d31a487c34dec2d",
+    "semantic_hash": ""
+  },
+  "src/components/ProcessSection.vue": {
+    "mtime": 1794732673.0393944,
+    "seen": 1794732843.458835,
+    "ast_hash": "3e122706403b1b4348a60a01db6910b6",
+    "semantic_hash": ""
+  },
+  "src/components/SectionHead.vue": {
+    "mtime": 1794732673.039167,
+    "seen": 1794732843.458836,
+    "ast_hash": "2e8958357050646ea3c97233aae212ff",
+    "semantic_hash": ""
+  },
+  "src/components/ornaments/OrnDivider.vue": {
+    "mtime": 1794732622.8449154,
+    "seen": 1794732843.458842,
+    "ast_hash": "defdfd034d56562c8480227e60cd0be2",
+    "semantic_hash": ""
+  },
+  "src/components/ornaments/OrnFrame.vue": {
+    "mtime": 1794732052.696688,
+    "seen": 1794732233.441542,
+    "ast_hash": "3691da726eda3a642341640b396a731d",
+    "semantic_hash": ""
+  },
+  "src/components/ornaments/OrnMoon.vue": {
+    "mtime": 1794730960.2105165,
+    "seen": 1794731220.65262,
+    "ast_hash": "326e2ea7acdededb0c03940860c6b98e",
+    "semantic_hash": ""
+  },
+  "src/components/ornaments/OrnSigil.vue": {
+    "mtime": 1794730959.7912445,
+    "seen": 1794731220.652621,
+    "ast_hash": "3f19ffd542bd297ded34f4d0c0f1c8f4",
+    "semantic_hash": ""
+  },
+  "src/directives.js": {
+    "mtime": 1794730958.3650544,
+    "seen": 1794731220.652622,
+    "ast_hash": "85b4e81b0faf18b33dc3e7959baa5ee0",
+    "semantic_hash": ""
+  },
+  "scripts/check-booking.mjs": {
+    "mtime": 1794731570.015354,
+    "seen": 1794731682.401216,
+    "ast_hash": "06d1424c79aacb699ed7727182fec214",
+    "semantic_hash": ""
+  },
+  "src/booking.js": {
+    "mtime": 1794732698.983828,
+    "seen": 1794732843.45883,
+    "ast_hash": "b59cda80f369588c9272e2a045ca56fb",
+    "semantic_hash": ""
+  },
+  "src/components/BookingWidget.vue": {
+    "mtime": 1794732698.983506,
+    "seen": 1794732843.4588318,
+    "ast_hash": "619ff1acef87e5c0a369def5ce1e3800",
+    "semantic_hash": ""
+  },
+  "src/components/WorkLightbox.vue": {
+    "mtime": 1794732652.175741,
+    "seen": 1794732843.458839,
+    "ast_hash": "0e3278aa6c8a784846e0dcc076a07a55",
+    "semantic_hash": ""
+  },
+  "src/components/ornaments/OrnCorner.vue": {
+    "mtime": 1794732060.1588726,
+    "seen": 1794732233.44154,
+    "ast_hash": "597795d13bee05da1db502c1703fa5d2",
+    "semantic_hash": ""
+  },
+  "scripts/storyblok-setup.mjs": {
+    "mtime": 1794734099.6712203,
+    "seen": 1794734130.2427819,
+    "ast_hash": "878f4b8bfc5f2a65b0f7adc9b74431d0",
+    "semantic_hash": ""
+  },
+  "src/content/home.json": {
+    "mtime": 1794732561.0325384,
+    "seen": 1794732843.458845,
+    "ast_hash": "41f28f7100b8ff1fd722e99cc0270d4e",
+    "semantic_hash": ""
+  },
+  "src/storyblok.js": {
+    "mtime": 1794732860.7207632,
+    "seen": 1794732907.1279712,
+    "ast_hash": "8ea95e67616241b0c8e95acac87c38d3",
+    "semantic_hash": ""
+  },
+  "src/utils.js": {
+    "mtime": 1794732673.0023038,
+    "seen": 1794732843.458849,
+    "ast_hash": "4ba322afe0aa814262b81458dbba4048",
+    "semantic_hash": ""
+  },
+  "storyblok/components.json": {
+    "mtime": 1794732561.5112004,
+    "seen": 1794732843.4588501,
+    "ast_hash": "649fad2903a4b57bdf7209c6569b9f36",
+    "semantic_hash": ""
+  },
+  "docker-compose.yml": {
+    "mtime": 1794733349.2474763,
+    "seen": 1794733398.9677708,
+    "ast_hash": "90fd40c0e5fadcd4f51cda5c45f43306",
+    "semantic_hash": ""
+  },
+  "public/works/ange.jpg": {
+    "mtime": 1794731862.0996702,
+    "seen": 1794732843.4588559,
+    "ast_hash": "151edb406270f3b380491ddc594cd461",
+    "semantic_hash": ""
+  },
+  "public/works/crane.jpg": {
+    "mtime": 1794731862.0056007,
+    "seen": 1794732843.458857,
+    "ast_hash": "4c67bdc5ecad7d487be892749deff7e7",
+    "semantic_hash": ""
+  },
+  "public/works/epines.jpg": {
+    "mtime": 1794731861.948767,
+    "seen": 1794732843.458859,
+    "ast_hash": "f7b26207e9e91d0db7661affa038e2b2",
+    "semantic_hash": ""
+  },
+  "public/works/larve.jpg": {
+    "mtime": 1794731861.7668285,
+    "seen": 1794732843.458859,
+    "ast_hash": "ede8c9ee3413758019d88593f66fda2d",
+    "semantic_hash": ""
+  },
+  "public/works/ronces.jpg": {
+    "mtime": 1794731862.1585505,
+    "seen": 1794732843.45886,
+    "ast_hash": "ef21d4409d8964fdbae902d5f5ae0193",
+    "semantic_hash": ""
+  },
+  "public/works/sceau.jpg": {
+    "mtime": 1794731861.829028,
+    "seen": 1794732843.458861,
+    "ast_hash": "0c9f5b7a74431d844784425eceb24f9d",
+    "semantic_hash": ""
+  },
+  "public/works/spectre.jpg": {
+    "mtime": 1794731862.225024,
+    "seen": 1794732843.458862,
+    "ast_hash": "862131e65410baf1394cb545c5cf21c9",
+    "semantic_hash": ""
+  },
+  "public/works/ver.jpg": {
+    "mtime": 1794731862.0647473,
+    "seen": 1794732843.458862,
+    "ast_hash": "3e2585784915855a58a4d71f2ab246db",
+    "semantic_hash": ""
+  },
+  "public/works/yeux.jpg": {
+    "mtime": 1794731861.8880463,
+    "seen": 1794732843.458863,
+    "ast_hash": "f1ccec675543cc676cc9ea56df2038bb",
+    "semantic_hash": ""
+  }
+}
