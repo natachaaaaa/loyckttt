@@ -14,8 +14,21 @@ Copier `.env.example` en `.env` (facultatif : sans réglage, le site tourne avec
 
 Après toute modification (contenu ou `.env`), reconstruire : `docker compose up -d --build`.
 
-- Logo: `node scripts/split-logo.mjs <logo.svg> [--drop-letter=N]` regenerates `src/assets/logo-*.svg`.
 - Checks: `node scripts/check-booking.mjs`.
+- `npm run build` pré-génère le HTML complet de la page (`scripts/prerender.mjs`) : les moteurs de recherche
+  lisent tout le contenu sans exécuter de JavaScript.
+
+### Logo
+
+Après un changement de logo :
+
+```bash
+node scripts/split-logo.mjs <logo.svg> [--drop-letter=N]
+swiftc -O scripts/render-logo.swift -o /tmp/render-logo
+/tmp/render-logo src/assets/logo-roots.svg src/assets/logo-roots.svg /tmp/r.png 2432 1071 1 && cwebp -q 80 /tmp/r.png -o src/assets/logo-roots-2432.webp
+/tmp/render-logo src/assets/logo-roots.svg src/assets/logo-roots.svg /tmp/r.png 1216 536 1 && cwebp -q 80 /tmp/r.png -o src/assets/logo-roots-1216.webp
+sed 's/currentColor/#f0ebe3/g' src/assets/logo-letters.svg > /tmp/l.svg && /tmp/render-logo /tmp/l.svg src/assets/logo-roots.svg /tmp/og.png 1200 630 0.86 "TATOUEUR À CASTRES" && sips -s format jpeg /tmp/og.png --out public/og-image.jpg
+```
 
 ## Contenu
 
@@ -29,11 +42,12 @@ Chaque `_uid` doit rester unique (n'importe quel texte).
 | `marquee` | `tags` : mots séparés par des virgules |
 | `about` | `title`, `text` (retour à la ligne : `\n`), `portrait` (image ou `null`) |
 | `divider` | aucun (la frise à l'œil) |
-| `works` | `title`, `items` : `{ "_uid", "component": "work", "year", "image" }` |
+| `works` | `title`, `subtitle`, `items` : `{ "_uid", "component": "work", "year", "image" }` |
 | `flashes` | `kicker`, `title`, `intro`, `items` : `{ "_uid", "component": "flash", "name", "size", "taken", "image" }` |
 | `process` | `kicker`, `title`, `steps` : `{ "_uid", "component": "step", "title", "text" }` (numérotées I, II…) |
 | `agenda` | `kicker`, `title`, `events` : `{ "_uid", "component": "event", "date": "AAAA-MM-JJ", "city", "place", "status": "open" \| "full" \| "soon" }` |
-| `infos` | `kicker`, `title`, `blocks` : `{ "_uid", "component": "info", "title", "lines" (une puce par ligne, `\n`), "note" }` |
+| `infos` | `kicker`, `title`, `blocks` : `{ "_uid", "component": "info", "title", "lines" (une puce par ligne, `\n`), "note", "address": true (affiche le salon de business.json) }` |
+| `faq` | `kicker`, `title`, `items` : `{ "_uid", "question", "answer" }` (aussi publiées en données structurées) |
 | `contact` | `kicker`, `title`, `text`, `email`, `instagram` |
 
 **Images** : déposer le fichier dans `public/` (ex. `public/works/nouveau.jpg`), puis
@@ -46,6 +60,50 @@ Chaque `_uid` doit rester unique (n'importe quel texte).
 1000 px de haut suffisent (`sips -Z 1000 photo.jpg` sur Mac).
 
 **Dates de l'agenda** : une date passée disparaît toute seule du site ; la phase de lune est calculée.
+
+## Référencement : « tatoueur Castres »
+
+### Ce que fait le site
+
+- **HTML pré-généré** au build : titre, h1 (« Loyck, Tatoueur à Castres »), textes, FAQ et adresse sont dans le
+  HTML envoyé à Google, pas seulement dans le JavaScript.
+- **Balises** (`index.html`) : titre et description ciblés, Open Graph / Twitter (image `public/og-image.jpg`),
+  géolocalisation Castres (FR-81), favicon et icône.
+- **Données structurées** (JSON-LD, `src/seo.js`) : Loyck (`Person`) qui travaille au salon
+  (`TattooParlor` Tigroo Tattoo Piercing, avec adresse), le site (`WebSite`) et la FAQ (`FAQPage`).
+- **Contenu** : bio, sous-titres, FAQ locale (Castres, Tarn, Albi, Mazamet, Toulouse…), textes alternatifs
+  des photos, nom/adresse/téléphone du salon dans les infos pratiques et le pied de page.
+- **Vitesse** : image du logo en WebP adaptée à l'écran (LCP), widget de RDV chargé côté navigateur.
+- `robots.txt`, et `sitemap.xml` + URL canonique dès que `siteUrl` est rempli.
+
+### À remplir : `src/content/business.json`
+
+| Champ | Pourquoi |
+|---|---|
+| `siteUrl` | **Obligatoire avant la mise en ligne** (ex. `https://loyck-tattoo.fr`) : URL canonique, sitemap, image de partage. |
+| `salon.streetAddress`, `salon.phone` | Pré-remplis depuis des annuaires : **à vérifier** contre la fiche Google du salon, au caractère près. |
+| `salon.latitude` / `longitude` | Position exacte du salon (clic droit sur Google Maps). |
+| `salon.openingHours` | Format `"Tu-Sa 10:00-19:00"`, identique à la fiche Google. |
+| `salon.googleBusinessUrl` | Lien de la fiche Google du salon. |
+
+Un champ vide n'est pas publié : ne rien y mettre d'approximatif.
+
+Vérifier après mise en ligne : [Test des résultats enrichis](https://search.google.com/test/rich-results) et
+[Search Console](https://search.google.com/search-console) (valider le domaine, envoyer `sitemap.xml`).
+
+### Hors du site : ce qui pèse le plus pour la 1re place
+
+Sur « tatoueur Castres », Google affiche d'abord la carte avec 3 fiches d'établissements : c'est la fiche
+**Google Business Profile du salon** qui s'y classe, pas le site seul.
+
+1. **Fiche Google du salon** : catégorie « Salon de tatouage », photos des tatouages de Loyck, posts réguliers,
+   et un lien vers ce site (bouton site web ou lien « réserver »).
+2. **Avis Google** sur la fiche du salon : en demander après chaque séance, qui mentionnent naturellement
+   le tatouage et Castres. Répondre à chacun.
+3. **Même nom, adresse, téléphone partout** : fiche Google, site, Instagram, PagesJaunes, annuaires.
+4. **Liens vers le site** : bio Instagram de Loyck et du salon, site du salon (page artiste), conventions,
+   presse locale, annuaires de tatoueurs.
+5. **Nom de domaine** court et lisible (le mot-clé dans le domaine n'est pas nécessaire).
 
 ## Prise de rendez-vous
 

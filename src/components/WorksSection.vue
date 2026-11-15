@@ -60,6 +60,7 @@ onBeforeUnmount(() => ctx?.revert())
 <template>
   <section ref="root" class="works" aria-labelledby="works-title">
     <h2 id="works-title" :key="blok.title" ref="title" class="section-title works__title">{{ blok.title }}</h2>
+    <p v-if="blok.subtitle" class="works__subtitle">{{ blok.subtitle }}</p>
     <div class="works__cols">
       <div v-for="(col, c) in columns" :key="c" class="works__col">
         <button
@@ -92,6 +93,14 @@ onBeforeUnmount(() => ctx?.revert())
   padding: clamp(4rem, 8vw, 9rem) var(--gutter) 0;
   max-width: 1920px;
   margin-inline: auto;
+}
+
+.works__subtitle {
+  margin: 0.75rem 0 0 clamp(0px, 22vw, 470px);
+  font-family: var(--font-metal);
+  font-size: clamp(1.1rem, 1.5vw, 1.5rem);
+  letter-spacing: 0.08em;
+  color: var(--muted);
 }
 
 .works__title {

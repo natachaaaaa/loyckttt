@@ -1,0 +1,32 @@
+{
+  "_comment": "Fiche artiste + salon : alimente les données structurées (Google), le pied de page, les infos pratiques et les balises. Un champ vide n'est PAS publié. Le nom, l'adresse et le téléphone du salon doivent être IDENTIQUES (au caractère près) à la fiche Google Business Profile du salon.",
+
+  "siteUrl": "",
+
+  "artist": {
+    "name": "Loyck",
+    "jobTitle": "Tatoueur et illustrateur",
+    "description": "Loyck, tatoueur à Castres (Tarn) chez Tigroo Tattoo Piercing : tatouages blackwork, dotwork, biomécanique et cybersigilism, à l'encre noire. Flashs uniques et projets dessinés sur mesure.",
+    "instagram": "https://www.instagram.com/loyck.ttt/",
+    "styles": ["Blackwork", "Dotwork", "Biomécanique", "Cybersigilism", "Illustration horrifique"]
+  },
+
+  "salon": {
+    "_comment": "Adresse et téléphone trouvés sur 2 annuaires (Fresha, Cylex) : À VÉRIFIER contre la fiche Google du salon.",
+    "name": "Tigroo Tattoo Piercing",
+    "streetAddress": "5 rue de la Libération",
+    "postalCode": "81100",
+    "city": "Castres",
+    "department": "Tarn",
+    "region": "Occitanie",
+    "country": "FR",
+    "phone": "+33 5 81 43 43 21",
+    "latitude": null,
+    "longitude": null,
+    "openingHours": [],
+    "instagram": "https://www.instagram.com/tigrootattoopiercing/",
+    "googleBusinessUrl": ""
+  },
+
+  "areaServed": ["Castres", "Mazamet", "Albi", "Lavaur", "Graulhet", "Revel", "Toulouse", "Tarn"]
+}

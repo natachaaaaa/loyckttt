@@ -57,3 +57,30 @@ a {
   font-size: clamp(2.5rem, 5vw, 5.5rem);
   line-height: 1;
 }
+
+/* Hero intro start state, set before any JS runs (html.js comes from an inline script in index.html):
+   the prerendered logo would otherwise flash fully drawn, then vanish when the GSAP intro starts.
+   The fallback animation shows it anyway if the JS bundle never loads (no visible change once the
+   intro has run: it ends on the same values). */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .logo__letter {
+    opacity: 0;
+    animation: logo-fallback 0s 5s forwards;
+  }
+  html.js .hero__roots {
+    --reveal: 0%;
+    animation: roots-fallback 0s 5s forwards;
+  }
+}
+
+@keyframes logo-fallback {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes roots-fallback {
+  to {
+    --reveal: 60%;
+  }
+}

@@ -7,13 +7,13 @@
     {
       "_uid": "marquee",
       "component": "marquee",
-      "tags": "Cybersigilism, Trash, Blackwork, Cyberpunk, Biomécanique, Dotwork"
+      "tags": "Tatoueur à Castres, Cybersigilism, Trash, Blackwork, Cyberpunk, Biomécanique, Dotwork"
     },
     {
       "_uid": "about",
       "component": "about",
       "title": "Qui suis-je?",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam eros, accumsan a elementum ut, egestas id purus. Nulla velit nibh, tristique a velit ut, gravida dictum nisl. Proin imperdiet euismod ex in iaculis. Aenean id semper quam. Ut quis elit dolor. Sed lectus nibh, condimentum quis odio at, tempus dignissim nulla. Nulla non augue vel arcu tincidunt volutpat vitae consectetur arcu. Nam elementum nunc ut ex laoreet, eget consectetur metus rhoncus.",
+      "text": "Je suis Loyck, tatoueur et illustrateur à Castres, dans le Tarn. Je tatoue au salon Tigroo Tattoo Piercing.\nMon travail se situe entre le blackwork, la biomécanique et l'illustration horrifique : des formes qui poussent comme des organismes, racines, épines et filaments, et qui suivent les muscles et les courbes du corps. Tout est à l'encre noire : traits continus, hachures et dotwork pour les ombres.\nYeux, insectes, larves et chrysalides, visages déformés, sceaux et lunes, fleurs noires en contrepoint. Chaque pièce est dessinée pour toi, et pour un emplacement précis.",
       "portrait": null
     },
     {
@@ -23,7 +23,7 @@
     {
       "_uid": "works",
       "component": "works",
-      "title": "Realisations",
+      "title": "Réalisations",
       "items": [
         {
           "_uid": "w1",
@@ -31,7 +31,7 @@
           "year": "2025",
           "image": {
             "filename": "/works/larve.jpg",
-            "alt": "Larve en dotwork sur un mollet",
+            "alt": "Tatouage d’une larve en dotwork sur un mollet",
             "width": 1000,
             "height": 1000
           }
@@ -42,7 +42,7 @@
           "year": "2025",
           "image": {
             "filename": "/works/sceau.jpg",
-            "alt": "Sceau cybersigil symétrique autour d’un œil, sur un mollet",
+            "alt": "Tatouage cybersigilism : sceau symétrique autour d’un œil, sur un mollet",
             "width": 1000,
             "height": 1000
           }
@@ -53,7 +53,7 @@
           "year": "2025",
           "image": {
             "filename": "/works/yeux.jpg",
-            "alt": "Ornement filigrane ouvrant trois yeux sur une cuisse",
+            "alt": "Tatouage blackwork en filigrane ouvrant trois yeux sur une cuisse",
             "width": 750,
             "height": 1000
           }
@@ -64,7 +64,7 @@
           "year": "2025",
           "image": {
             "filename": "/works/epines.jpg",
-            "alt": "Tige épineuse le long d’un avant-bras",
+            "alt": "Tatouage d’une tige épineuse cybersigilism le long d’un avant-bras",
             "width": 1000,
             "height": 1000
           }
@@ -75,7 +75,7 @@
           "year": "2026",
           "image": {
             "filename": "/works/crane.jpg",
-            "alt": "Crâne en blackwork entouré de pointes",
+            "alt": "Tatouage blackwork d’un crâne entouré de pointes",
             "width": 750,
             "height": 1000
           }
@@ -86,7 +86,7 @@
           "year": "2026",
           "image": {
             "filename": "/works/ver.jpg",
-            "alt": "Visage déformé traversé par un ver, aux dents longues",
+            "alt": "Tatouage d’un visage déformé traversé par un ver, illustration horrifique",
             "width": 832,
             "height": 1000
           }
@@ -97,7 +97,7 @@
           "year": "2024",
           "image": {
             "filename": "/works/ange.jpg",
-            "alt": "Figure ailée anatomique sur un avant-bras",
+            "alt": "Tatouage d’une figure ailée anatomique sur un avant-bras",
             "width": 800,
             "height": 1000
           }
@@ -108,7 +108,7 @@
           "year": "2026",
           "image": {
             "filename": "/works/ronces.jpg",
-            "alt": "Ronces cybersigil couvrant un bras",
+            "alt": "Tatouage de ronces cybersigilism couvrant un bras",
             "width": 750,
             "height": 1000
           }
@@ -119,19 +119,20 @@
           "year": "2026",
           "image": {
             "filename": "/works/spectre.jpg",
-            "alt": "Forme spectrale en fumée et texture, sur une jambe",
+            "alt": "Tatouage d’une forme spectrale en fumée et texture, sur une jambe",
             "width": 826,
             "height": 1000
           }
         }
-      ]
+      ],
+      "subtitle": "Tatouages réalisés à Castres"
     },
     {
       "_uid": "flashes",
       "component": "flashes",
       "kicker": "Pièces uniques",
       "title": "Flashs disponibles",
-      "intro": "Chaque flash n'est tatoué qu'une seule fois. Taille et emplacement s'ajustent ensemble avant la séance.",
+      "intro": "Chaque flash n'est tatoué qu'une seule fois. Taille et emplacement s'ajustent ensemble avant la séance, au salon à Castres.",
       "items": [
         {
           "_uid": "f1",
@@ -263,9 +264,10 @@
         {
           "_uid": "i2",
           "component": "info",
-          "title": "Le studio",
-          "lines": "Adresse à compléter\nVille\nSur rendez-vous uniquement",
-          "note": "Du mardi au samedi."
+          "title": "Le salon",
+          "lines": "Sur rendez-vous uniquement",
+          "note": "Les rendez-vous se prennent en ligne, en bas de page.",
+          "address": true
         },
         {
           "_uid": "i3",
@@ -277,11 +279,54 @@
       ]
     },
     {
+      "_uid": "faq",
+      "component": "faq",
+      "kicker": "Tatouage à Castres",
+      "title": "Questions fréquentes",
+      "items": [
+        {
+          "_uid": "q1",
+          "question": "Où se faire tatouer par Loyck à Castres ?",
+          "answer": "Au salon Tigroo Tattoo Piercing, 5 rue de la Libération à Castres (Tarn), uniquement sur rendez-vous."
+        },
+        {
+          "_uid": "q2",
+          "question": "Quels styles de tatouage ?",
+          "answer": "Blackwork, dotwork, biomécanique, cybersigilism et illustration horrifique, toujours à l'encre noire : des formes organiques, racines, épines, filaments, yeux, insectes, dessinées pour suivre les lignes du corps."
+        },
+        {
+          "_uid": "q3",
+          "question": "Comment prendre rendez-vous ?",
+          "answer": "Choisis un créneau libre dans le calendrier en bas de page et décris ton projet : idée, emplacement, taille, références. Le rendez-vous est confirmé après échange et versement d'un acompte, déduit du prix final."
+        },
+        {
+          "_uid": "q4",
+          "question": "Combien coûte un tatouage ?",
+          "answer": "Le prix dépend de la taille, de l'emplacement et du niveau de détail : il est établi sur devis, après échange sur le projet."
+        },
+        {
+          "_uid": "q5",
+          "question": "Je viens d'Albi, de Mazamet ou de Toulouse : c'est possible ?",
+          "answer": "Oui. Les séances ont lieu à Castres, et les demandes sont ouvertes depuis tout le Tarn et l'Occitanie : Mazamet, Albi, Lavaur, Graulhet, Revel, Toulouse…"
+        },
+        {
+          "_uid": "q6",
+          "question": "Les flashs sont-ils uniques ?",
+          "answer": "Oui : chaque flash n'est tatoué qu'une seule fois. Taille et emplacement s'ajustent ensemble avant la séance."
+        },
+        {
+          "_uid": "q7",
+          "question": "Comment préparer sa séance ?",
+          "answer": "Viens reposé·e, après avoir mangé, avec une peau hydratée et sans coup de soleil. Une fiche de soins est remise après chaque séance."
+        }
+      ]
+    },
+    {
       "_uid": "contact",
       "component": "contact",
       "kicker": "Projets ouverts",
       "title": "Prendre rendez-vous",
-      "text": "Choisis un créneau libre, puis décris ton projet.",
+      "text": "Choisis un créneau libre, puis décris ton projet. Les séances ont lieu à Castres, au salon Tigroo Tattoo Piercing.",
       "email": "contact@exemple.fr",
       "instagram": "https://www.instagram.com/loyck.ttt/"
     }

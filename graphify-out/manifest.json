@@ -12,9 +12,9 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1794735221.7444673,
-    "seen": 1794735235.35979,
-    "ast_hash": "207fbcf0ec2588c8c0266a6afb62ce51",
+    "mtime": 1794735552.055235,
+    "seen": 1794735833.135663,
+    "ast_hash": "5f9bf33a10dbb55b2725f839ccf36485",
     "semantic_hash": ""
   },
   "scripts/split-logo.mjs": {
@@ -42,21 +42,21 @@
     "semantic_hash": ""
   },
   "src/components/TheFooter.vue": {
-    "mtime": 1794730001.7636104,
-    "seen": 1794730188.767554,
-    "ast_hash": "2470f3f42a9e180502db3cb770508708",
+    "mtime": 1794735533.4758081,
+    "seen": 1794735833.135683,
+    "ast_hash": "4a7abe2c884b31154753ac2d2935db56",
     "semantic_hash": ""
   },
   "src/components/TheHero.vue": {
-    "mtime": 1794735221.746556,
-    "seen": 1794735235.359804,
-    "ast_hash": "59e52ee5823b1db434d63e8ff65f65bb",
+    "mtime": 1794735689.3677173,
+    "seen": 1794735833.135684,
+    "ast_hash": "7ed86ff5d2614cc3b3bd20325a7c02ef",
     "semantic_hash": ""
   },
   "src/components/WorksSection.vue": {
-    "mtime": 1794735221.746815,
-    "seen": 1794735235.359806,
-    "ast_hash": "ce923f160eeec0ebe101bb861555593b",
+    "mtime": 1794735533.473339,
+    "seen": 1794735833.135686,
+    "ast_hash": "3e48c7fae1f0bbde32c871c913dcc2d0",
     "semantic_hash": ""
   },
   "src/gsap.js": {
@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/main.js": {
-    "mtime": 1794735221.7475798,
-    "seen": 1794735235.359815,
-    "ast_hash": "7350c0ac55a31a7ae746874ade036315",
+    "mtime": 1794735393.8171177,
+    "seen": 1794735833.135697,
+    "ast_hash": "702b27608f072f337ba61a62958fb4f7",
     "semantic_hash": ""
   },
   "vite.config.js": {
@@ -78,27 +78,21 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794735221.7437212,
-    "seen": 1794735235.359817,
-    "ast_hash": "6eb2c951757ff3a1b4c774576c7b4317",
+    "mtime": 1794735802.7467194,
+    "seen": 1794735833.1357,
+    "ast_hash": "9d14f0741672d1dc57291f149465e955",
     "semantic_hash": ""
   },
   "index.html": {
-    "mtime": 1794729960.2689683,
-    "seen": 1794730188.7675588,
-    "ast_hash": "f58da9e3ffaeb734cc15e6424b572ede",
+    "mtime": 1794735689.3683524,
+    "seen": 1794735833.1357021,
+    "ast_hash": "2f313d237ef006e841d302081475fce6",
     "semantic_hash": ""
   },
   "public/favicon.svg": {
-    "mtime": 1794729929.2526567,
-    "seen": 1794730188.76756,
-    "ast_hash": "7e840862161341271697daa99a40d76b",
-    "semantic_hash": ""
-  },
-  "public/icons.svg": {
-    "mtime": 1794729929.2528937,
-    "seen": 1794730188.767561,
-    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "mtime": 1794735612.0613382,
+    "seen": 1794735833.135703,
+    "ast_hash": "fdfc60373b81aefb0f3386b71ab80966",
     "semantic_hash": ""
   },
   "src/assets/logo-letters.svg": {
@@ -120,9 +114,9 @@
     "semantic_hash": ""
   },
   "src/components/ContactSection.vue": {
-    "mtime": 1794735221.7455258,
-    "seen": 1794735235.359798,
-    "ast_hash": "0f79083482188e124070fce101f1622c",
+    "mtime": 1794735406.7620199,
+    "seen": 1794735833.135676,
+    "ast_hash": "b6b171099747993009a14856edfd616c",
     "semantic_hash": ""
   },
   "src/components/FlashSection.vue": {
@@ -132,9 +126,9 @@
     "semantic_hash": ""
   },
   "src/components/InfosSection.vue": {
-    "mtime": 1794735221.7458682,
-    "seen": 1794735235.3598,
-    "ast_hash": "c0499ad947ac79cb54f02b8ed51506b1",
+    "mtime": 1794735533.4747212,
+    "seen": 1794735833.135679,
+    "ast_hash": "446524323db5a432d11311eabdd68e15",
     "semantic_hash": ""
   },
   "src/components/ProcessSection.vue": {
@@ -210,9 +204,9 @@
     "semantic_hash": ""
   },
   "src/content/home.json": {
-    "mtime": 1794735221.7474115,
-    "seen": 1794735235.359812,
-    "ast_hash": "62491dccde67795db3c276f525ff0a5c",
+    "mtime": 1794735503.2344553,
+    "seen": 1794735833.135693,
+    "ast_hash": "66a05eb075e0cbc4ac0ee1c732fa5598",
     "semantic_hash": ""
   },
   "src/utils.js": {
@@ -285,6 +279,78 @@
     "mtime": 1794735221.7471514,
     "seen": 1794735235.359811,
     "ast_hash": "b5874b4cab101f8df4995da575b6445e",
+    "semantic_hash": ""
+  },
+  "scripts/prerender.mjs": {
+    "mtime": 1794735551.8640494,
+    "seen": 1794735833.135666,
+    "ast_hash": "39c4daf09c54bb432bf2f8fbbe188be9",
+    "semantic_hash": ""
+  },
+  "scripts/render-logo.swift": {
+    "mtime": 1794735656.0743928,
+    "seen": 1794735833.1356668,
+    "ast_hash": "1c250214d3d3d11291385fc25bbf1f3e",
+    "semantic_hash": ""
+  },
+  "src/app.js": {
+    "mtime": 1794735392.5546112,
+    "seen": 1794735833.13567,
+    "ast_hash": "2b99a1262dc5d211a596ecd3bbe473f1",
+    "semantic_hash": ""
+  },
+  "src/components/ClientOnly.vue": {
+    "mtime": 1794735394.2473662,
+    "seen": 1794735833.135675,
+    "ast_hash": "d8143aabcc1f814e476abe93ee18b27a",
+    "semantic_hash": ""
+  },
+  "src/components/FaqSection.vue": {
+    "mtime": 1794735514.654462,
+    "seen": 1794735833.1356769,
+    "ast_hash": "0b381513579f305c67f546580c521a6e",
+    "semantic_hash": ""
+  },
+  "src/content/business.json": {
+    "mtime": 1794735440.4135253,
+    "seen": 1794735833.1356921,
+    "ast_hash": "6a2c460a832ff48115164ff5bfbbd477",
+    "semantic_hash": ""
+  },
+  "src/entry-server.js": {
+    "mtime": 1794735394.0362308,
+    "seen": 1794735833.1356952,
+    "ast_hash": "7df483d93461ac1814519fc6222cdf7a",
+    "semantic_hash": ""
+  },
+  "src/seo.js": {
+    "mtime": 1794735533.2625175,
+    "seen": 1794735833.135697,
+    "ast_hash": "10f21a8ca98a775360bdcf9b1be4061a",
+    "semantic_hash": ""
+  },
+  "public/apple-touch-icon.png": {
+    "mtime": 1794735612.2520757,
+    "seen": 1794735833.1357021,
+    "ast_hash": "a53bb12255196d2a5371cb80339a8d43",
+    "semantic_hash": ""
+  },
+  "public/og-image.jpg": {
+    "mtime": 1794735612.0529857,
+    "seen": 1794735833.135704,
+    "ast_hash": "83ffb94ee9275415cca58bf6dff360aa",
+    "semantic_hash": ""
+  },
+  "src/assets/logo-roots-1216.webp": {
+    "mtime": 1794735656.70517,
+    "seen": 1794735833.135714,
+    "ast_hash": "4af815ef99ff0f99073af68c42b727b7",
+    "semantic_hash": ""
+  },
+  "src/assets/logo-roots-2432.webp": {
+    "mtime": 1794735656.077451,
+    "seen": 1794735833.135715,
+    "ast_hash": "df098eac0d25d5ce889c6f2fb4345050",
     "semantic_hash": ""
   }
 }

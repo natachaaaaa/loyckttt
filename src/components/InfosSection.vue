@@ -1,6 +1,7 @@
 <script setup>
 import SectionHead from './SectionHead.vue'
 import OrnFrame from './ornaments/OrnFrame.vue'
+import { salon, salonAddress, salonPhone } from '../seo'
 
 defineProps({ blok: Object })
 // "lines" in home.json: one bullet per line ("\n").
@@ -13,6 +14,12 @@ const lines = (text) => (text || '').split('\n').map((l) => l.trim()).filter(Boo
     <div v-stagger class="infos__grid">
       <OrnFrame v-for="b in blok.blocks" :key="b._uid" class="infos__block">
         <h3 class="infos__title">{{ b.title }}</h3>
+        <!-- "address": true shows the salon from business.json (single source for name, address, phone). -->
+        <address v-if="b.address" class="infos__address body-text">
+          <strong>{{ salon.name }}</strong><br />
+          {{ salonAddress }}<br />
+          <a v-if="salonPhone" :href="salonPhone.href">{{ salonPhone.display }}</a>
+        </address>
         <ul class="infos__lines body-text">
           <li v-for="l in lines(b.lines)" :key="l">{{ l }}</li>
         </ul>
@@ -36,6 +43,21 @@ const lines = (text) => (text || '').split('\n').map((l) => l.trim()).filter(Boo
   font-size: clamp(1.8rem, 2.6vw, 2.5rem);
   color: var(--bone);
   margin-bottom: 1rem;
+}
+
+.infos__address {
+  font-style: normal;
+  margin-bottom: 0.75rem;
+}
+
+.infos__address strong {
+  font-weight: 400;
+  color: var(--bone);
+}
+
+.infos__address a {
+  color: var(--bone);
+  text-underline-offset: 0.2em;
 }
 
 .infos__lines {

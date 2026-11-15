@@ -2,6 +2,7 @@
 import SectionHead from './SectionHead.vue'
 import OrnFrame from './ornaments/OrnFrame.vue'
 import BookingWidget from './BookingWidget.vue'
+import ClientOnly from './ClientOnly.vue'
 import { CONTACT_EMAIL } from '../booking'
 
 defineProps({ blok: Object })
@@ -12,7 +13,16 @@ defineProps({ blok: Object })
     <OrnFrame class="contact__frame">
       <SectionHead id="contact-title" :kicker="blok.kicker" :title="blok.title" />
       <p v-if="blok.text" class="body-text contact__text">{{ blok.text }}</p>
-      <BookingWidget :email="blok.email || CONTACT_EMAIL" />
+      <!-- Calendar depends on today's date: browser only. Crawlers and no-JS visitors get the email. -->
+      <ClientOnly>
+        <BookingWidget :email="blok.email || CONTACT_EMAIL" />
+        <template #fallback>
+          <p class="body-text contact__fallback">
+            Calendrier des disponibilités en cours de chargement. Tu peux aussi écrire à
+            <a :href="`mailto:${blok.email || CONTACT_EMAIL}`">{{ blok.email || CONTACT_EMAIL }}</a>.
+          </p>
+        </template>
+      </ClientOnly>
       <p class="contact__alt">
         Autre question ?
         <a :href="`mailto:${blok.email || CONTACT_EMAIL}`">{{ blok.email || CONTACT_EMAIL }}</a>
@@ -39,6 +49,15 @@ defineProps({ blok: Object })
   max-width: 44ch;
   margin-top: 1.5rem;
   color: var(--muted);
+}
+
+.contact__fallback {
+  margin-top: 2.5rem;
+  color: var(--muted);
+}
+
+.contact__fallback a {
+  color: var(--bone);
 }
 
 .contact__alt {
