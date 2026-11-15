@@ -1,67 +1,51 @@
-# Loyck — site
+# Loyck — site (version statique)
 
-Vue 3 + Vite + GSAP, contenu géré dans Storyblok.
+Vue 3 + Vite + GSAP. Tout le contenu est dans le dépôt : pas de CMS, pas de service externe pour le contenu.
+La version avec administration Storyblok est sur la branche `main`.
 
 ## Lancer
 
-Copier `.env.example` en `.env` et le remplir (tout est facultatif : sans réglage, le site tourne avec le
-contenu embarqué et des créneaux de démo).
+Copier `.env.example` en `.env` (facultatif : sans réglage, le site tourne avec des créneaux de démo en dev).
 
 | | Docker | Sans Docker |
 |---|---|---|
-| Site (prod, nginx) | `docker compose up -d --build` → http://localhost:8088 (port : `WEB_PORT`) | `npm run build` |
-| Dev (hot reload, https) | `docker compose --profile dev up dev` → https://localhost:5173 | `npm run dev:editor` |
-| Préconfigurer Storyblok | `docker compose run --rm storyblok-setup` | `npm run storyblok:setup` |
+| Site (prod, nginx) | `docker compose up -d --build` → http://localhost:8088 (port : `WEB_PORT`) | `npm run build` (dossier `dist/`, à déposer sur n'importe quel hébergement statique) |
+| Dev (rechargement à chaud) | `docker compose --profile dev up dev` → http://localhost:5173 | `npm run dev` |
 
-Les variables `VITE_*` sont figées au build : après les avoir changées, reconstruire (`--build`).
-Le contenu, lui, est lu en direct chez Storyblok : publier suffit, pas besoin de reconstruire.
+Après toute modification (contenu ou `.env`), reconstruire : `docker compose up -d --build`.
 
 - Logo: `node scripts/split-logo.mjs <logo.svg> [--drop-letter=N]` regenerates `src/assets/logo-*.svg`.
 - Checks: `node scripts/check-booking.mjs`.
 
-## Contenu : Storyblok
+## Contenu
 
-Chaque section de la page est un bloc Storyblok (Logo, Bandeau, Qui suis-je, Réalisations, Flashs, Déroulé,
-Guests & conventions, Infos pratiques, Prise de rendez-vous, Frise). Dans l'éditeur visuel, on clique sur une
-section du vrai site pour la modifier ; on peut aussi les réordonner, les dupliquer ou en retirer.
+Tout est dans **`src/content/home.json`** : une liste `sections`, dans l'ordre de la page. Chaque section a un
+`component` (son type) et ses champs. Réordonner, dupliquer ou supprimer une entrée change la page d'autant.
+Chaque `_uid` doit rester unique (n'importe quel texte).
 
-### Mise en place (une fois)
+| `component` | Champs |
+|---|---|
+| `hero` | aucun (le logo) |
+| `marquee` | `tags` : mots séparés par des virgules |
+| `about` | `title`, `text` (retour à la ligne : `\n`), `portrait` (image ou `null`) |
+| `divider` | aucun (la frise à l'œil) |
+| `works` | `title`, `items` : `{ "_uid", "component": "work", "year", "image" }` |
+| `flashes` | `kicker`, `title`, `intro`, `items` : `{ "_uid", "component": "flash", "name", "size", "taken", "image" }` |
+| `process` | `kicker`, `title`, `steps` : `{ "_uid", "component": "step", "title", "text" }` (numérotées I, II…) |
+| `agenda` | `kicker`, `title`, `events` : `{ "_uid", "component": "event", "date": "AAAA-MM-JJ", "city", "place", "status": "open" \| "full" \| "soon" }` |
+| `infos` | `kicker`, `title`, `blocks` : `{ "_uid", "component": "info", "title", "lines" (une puce par ligne, `\n`), "note" }` |
+| `contact` | `kicker`, `title`, `text`, `email`, `instagram` |
 
-1. Créer un compte sur storyblok.com et un **espace vide** (offre gratuite). Noter sa région (EU par défaut).
-2. Remplir dans `.env` :
-   - `STORYBLOK_SPACE_ID` : Paramètres de l'espace > Général ;
-   - `STORYBLOK_PAT` : Mon compte > Personal access tokens (secret, ne sert qu'au script) ;
-   - `VITE_STORYBLOK_TOKEN` : Paramètres de l'espace > Access tokens > token « Preview » ;
-   - `SITE_URL` : l'adresse https du site (en local : `https://localhost:5173/`).
-3. Lancer `docker compose run --rm storyblok-setup`. Le script crée tous les types de blocs, téléverse les
-   photos des réalisations, remplit et publie la page `home` avec le contenu actuel, et règle l'URL de
-   l'éditeur visuel. Le relancer est sans danger : il ne touche pas à une page déjà remplie
-   (`... storyblok-setup --reset` pour tout remettre à zéro, en écrasant les modifications).
-4. Reconstruire le site (`docker compose up -d --build`).
+**Images** : déposer le fichier dans `public/` (ex. `public/works/nouveau.jpg`), puis
 
-En local, l'éditeur visuel reste blanc tant que le navigateur refuse le certificat de https://localhost:5173.
-Deux options :
+```json
+"image": { "filename": "/works/nouveau.jpg", "alt": "Une phrase qui décrit la pièce", "width": 800, "height": 1000 }
+```
 
-- rapide : ouvrir une fois https://localhost:5173 dans le navigateur, « Avancé » > « Continuer » ;
-- durable : un certificat reconnu par la machine (ajoute une autorité locale aux certificats de confiance) :
+`width`/`height` : les dimensions réelles du fichier (évitent un saut de mise en page). Les redimensionner avant :
+1000 px de haut suffisent (`sips -Z 1000 photo.jpg` sur Mac).
 
-  ```bash
-  brew install mkcert && mkcert -install
-  mkdir -p certs && mkcert -cert-file certs/localhost.pem -key-file certs/localhost-key.pem localhost
-  ```
-
-  puis relancer le dev. `vite.config.js` utilise `certs/` automatiquement s'il existe.
-
-### Au quotidien
-
-- **Ajouter un tatouage** : bloc Réalisations > Tatouages > + Tatouage, choisir la photo (remplir son texte
-  alternatif : une phrase qui décrit la pièce), l'année. Publier. Les photos sont redimensionnées par Storyblok :
-  on peut téléverser l'original.
-- **Flash réservé** : cocher « Réservé ». **Date passée** : elle disparaît toute seule du site.
-- **Brouillon** : l'éditeur montre les brouillons ; le site public n'affiche que ce qui est publié.
-
-Si Storyblok ne répond pas, le site affiche le contenu embarqué (`src/content/home.json`) au lieu d'une page
-vide. Il n'est pas synchronisé : c'est un filet de sécurité, pas une sauvegarde.
+**Dates de l'agenda** : une date passée disparaît toute seule du site ; la phase de lune est calculée.
 
 ## Prise de rendez-vous
 

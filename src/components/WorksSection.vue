@@ -3,7 +3,7 @@ import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import { gsap, splitLetters } from '../gsap'
 import OrnCorner from './ornaments/OrnCorner.vue'
 import WorkLightbox from './WorkLightbox.vue'
-import { image } from '../storyblok'
+import { image } from '../content'
 import { roman } from '../utils'
 
 const props = defineProps({ blok: Object })
@@ -58,14 +58,14 @@ onBeforeUnmount(() => ctx?.revert())
 </script>
 
 <template>
-  <section ref="root" v-editable="blok" class="works" aria-labelledby="works-title">
+  <section ref="root" class="works" aria-labelledby="works-title">
     <h2 id="works-title" :key="blok.title" ref="title" class="section-title works__title">{{ blok.title }}</h2>
     <div class="works__cols">
       <div v-for="(col, c) in columns" :key="c" class="works__col">
         <button
           v-for="w in col"
           :key="w.uid"
-          v-editable="w.blok"
+         
           class="work"
           :class="{ 'is-odd': w.i % 2 }"
           :style="{ order: w.i }"

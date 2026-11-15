@@ -7,7 +7,7 @@ defineProps({ title: { type: String, default: '' }, kicker: String, id: String }
 <template>
   <div class="head">
     <p v-if="kicker" class="head__kicker"><OrnSigil /> {{ kicker }}</p>
-    <!-- key: a title edited in Storyblok re-creates the (letter-split) heading -->
+    <!-- key: a changed title re-creates the (letter-split) heading -->
     <h2 :id="id" :key="title" v-reveal class="section-title head__title">{{ title }}</h2>
   </div>
 </template>

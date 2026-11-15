@@ -40,7 +40,7 @@ onBeforeUnmount(() => ctx?.revert())
 </script>
 
 <template>
-  <header ref="root" v-editable="blok" class="hero">
+  <header ref="root" class="hero">
     <h1 class="hero__inner">
       <span class="sr-only">Loyck Tattoo</span>
       <span class="hero__art">

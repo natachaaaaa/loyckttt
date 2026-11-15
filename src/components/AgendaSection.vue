@@ -8,7 +8,7 @@ const props = defineProps({ blok: Object })
 const STATUS = { open: 'Places ouvertes', full: 'Complet', soon: 'À venir' }
 const today = new Date().toISOString().slice(0, 10)
 
-// Storyblok dates look like "2026-12-05 00:00". Past dates hide themselves; the rest are sorted.
+// Dates are "YYYY-MM-DD" in home.json. Past dates hide themselves; the rest are sorted.
 const events = computed(() =>
   (props.blok?.events || [])
     .map((e, i) => {
@@ -29,13 +29,13 @@ const events = computed(() =>
 </script>
 
 <template>
-  <section v-editable="blok" class="section agenda" aria-labelledby="agenda-title">
+  <section class="section agenda" aria-labelledby="agenda-title">
     <SectionHead id="agenda-title" :kicker="blok.kicker" :title="blok.title" />
     <ul v-stagger class="agenda__list">
       <li
         v-for="d in events"
         :key="d._uid"
-        v-editable="d"
+       
         class="agenda__row"
         :class="{ 'is-full': d.status === 'full' }"
       >

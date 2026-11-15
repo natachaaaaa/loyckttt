@@ -6,10 +6,10 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <section v-editable="blok" class="section process" aria-labelledby="process-title">
+  <section class="section process" aria-labelledby="process-title">
     <SectionHead id="process-title" :kicker="blok.kicker" :title="blok.title" />
     <ol v-stagger class="process__list">
-      <li v-for="(s, i) in blok.steps" :key="s._uid" v-editable="s" class="process__step">
+      <li v-for="(s, i) in blok.steps" :key="s._uid" class="process__step">
         <span class="process__n" aria-hidden="true">{{ roman(i + 1) }}</span>
         <h3 class="process__title">{{ s.title }}</h3>
         <p class="body-text">{{ s.text }}</p>

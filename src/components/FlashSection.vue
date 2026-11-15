@@ -2,18 +2,18 @@
 import { computed } from 'vue'
 import SectionHead from './SectionHead.vue'
 import OrnSigil from './ornaments/OrnSigil.vue'
-import { image } from '../storyblok'
+import { image } from '../content'
 
 const props = defineProps({ blok: Object })
 const flashes = computed(() => (props.blok?.items || []).map((f) => ({ ...f, img: image(f.image, 600) })))
 </script>
 
 <template>
-  <section v-editable="blok" class="section flash" aria-labelledby="flash-title">
+  <section class="section flash" aria-labelledby="flash-title">
     <SectionHead id="flash-title" :kicker="blok.kicker" :title="blok.title" />
     <p v-if="blok.intro" class="body-text flash__intro">{{ blok.intro }}</p>
     <ul v-stagger class="flash__grid">
-      <li v-for="f in flashes" :key="f._uid" v-editable="f" class="flash__card" :class="{ 'is-taken': f.taken }">
+      <li v-for="f in flashes" :key="f._uid" class="flash__card" :class="{ 'is-taken': f.taken }">
         <div class="flash__img">
           <img v-if="f.img" :src="f.img.src" :alt="f.img.alt || f.name" :width="f.img.w" :height="f.img.h" loading="lazy" />
           <OrnSigil v-else />

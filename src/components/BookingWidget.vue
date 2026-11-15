@@ -13,7 +13,7 @@ import {
   todayYmd,
 } from '../booking'
 
-// Address for direct contact and the mailto fallback (comes from the Storyblok contact section).
+// Address for direct contact and the mailto fallback (the contact section of home.json).
 const props = defineProps({ email: { type: String, required: true } })
 
 const today = todayYmd()

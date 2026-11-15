@@ -3,15 +3,15 @@ import SectionHead from './SectionHead.vue'
 import OrnFrame from './ornaments/OrnFrame.vue'
 
 defineProps({ blok: Object })
-// Storyblok textarea: one line per bullet.
+// "lines" in home.json: one bullet per line ("\n").
 const lines = (text) => (text || '').split('\n').map((l) => l.trim()).filter(Boolean)
 </script>
 
 <template>
-  <section v-editable="blok" class="section infos" aria-labelledby="infos-title">
+  <section class="section infos" aria-labelledby="infos-title">
     <SectionHead id="infos-title" :kicker="blok.kicker" :title="blok.title" />
     <div v-stagger class="infos__grid">
-      <OrnFrame v-for="b in blok.blocks" :key="b._uid" v-editable="b" class="infos__block">
+      <OrnFrame v-for="b in blok.blocks" :key="b._uid" class="infos__block">
         <h3 class="infos__title">{{ b.title }}</h3>
         <ul class="infos__lines body-text">
           <li v-for="l in lines(b.lines)" :key="l">{{ l }}</li>

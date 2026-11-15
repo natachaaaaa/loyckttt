@@ -5,4 +5,3 @@ dist
 graphify-out
 *.log
 .DS_Store
-certs

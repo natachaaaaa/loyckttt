@@ -3,7 +3,7 @@ import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import { gsap, ScrollTrigger } from '../gsap'
 
 const props = defineProps({ blok: Object })
-// Storyblok field: comma-separated words.
+// "tags" in home.json: comma-separated words.
 const tags = computed(() => (props.blok?.tags || '').split(',').map((t) => t.trim()).filter(Boolean))
 
 const root = ref()
@@ -33,7 +33,7 @@ onBeforeUnmount(() => ctx?.revert())
 </script>
 
 <template>
-  <div ref="root" v-editable="blok" class="marquee" :aria-label="tags.join(', ')">
+  <div ref="root" class="marquee" :aria-label="tags.join(', ')">
     <div class="marquee__track" aria-hidden="true">
       <span v-for="(tag, i) in [...tags, ...tags]" :key="i">{{ tag }}</span>
     </div>

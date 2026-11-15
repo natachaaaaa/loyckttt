@@ -4,8 +4,11 @@
   "2": "split-logo.mjs",
   "3": "vue",
   "4": "BookingWidget.vue",
+  "5": "booking.js",
   "6": "Prise de rendez-vous",
   "7": "OrnDivider.vue",
   "8": "WorksSection.vue",
-  "9": "storyblok-setup.mjs"
+  "9": "check-booking.mjs",
+  "10": "WorkLightbox.vue",
+  "11": "sendRequest"
 }

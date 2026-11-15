@@ -1,15 +1,13 @@
 <script setup>
-import { onMounted } from 'vue'
 import TheFooter from './components/TheFooter.vue'
-import { story, connectBridge } from './storyblok'
-
-onMounted(connectBridge)
+import { sections } from './content'
 </script>
 
 <template>
   <a class="book" href="#contact">Rendez-vous</a>
-  <main v-editable="story.content">
-    <StoryblokComponent v-for="blok in story.content.body" :key="blok._uid" :blok="blok" />
+  <main>
+    <!-- Each section of home.json renders the component registered under its "component" name (main.js). -->
+    <component :is="blok.component" v-for="blok in sections" :key="blok._uid" :blok="blok" />
   </main>
   <TheFooter />
 </template>

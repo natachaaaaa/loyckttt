@@ -8,7 +8,7 @@ defineProps({ blok: Object })
 </script>
 
 <template>
-  <section id="contact" v-editable="blok" class="section contact" aria-labelledby="contact-title">
+  <section id="contact" class="section contact" aria-labelledby="contact-title">
     <OrnFrame class="contact__frame">
       <SectionHead id="contact-title" :kicker="blok.kicker" :title="blok.title" />
       <p v-if="blok.text" class="body-text contact__text">{{ blok.text }}</p>

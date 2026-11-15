@@ -1,6 +1,5 @@
-# Site:            docker compose up -d --build        -> http://localhost:8088 (WEB_PORT in .env)
-# Dev (hot reload): docker compose --profile dev up dev -> https://localhost:5173 (usable in Storyblok's editor)
-# Storyblok setup: docker compose run --rm storyblok-setup [--reset]
+# Site:             docker compose up -d --build         -> http://localhost:8088 (WEB_PORT in .env)
+# Dev (hot reload): docker compose --profile dev up dev  -> http://localhost:5173 (DEV_PORT in .env)
 # Settings come from .env (copy .env.example).
 
 services:
@@ -8,8 +7,6 @@ services:
     build:
       context: .
       args:
-        VITE_STORYBLOK_TOKEN: ${VITE_STORYBLOK_TOKEN:-}
-        VITE_STORYBLOK_REGION: ${VITE_STORYBLOK_REGION:-eu}
         VITE_GCAL_ID: ${VITE_GCAL_ID:-}
         VITE_GCAL_KEY: ${VITE_GCAL_KEY:-}
         VITE_WEB3FORMS_KEY: ${VITE_WEB3FORMS_KEY:-}
@@ -22,7 +19,7 @@ services:
     profiles: [dev]
     image: node:22-alpine
     working_dir: /app
-    command: sh -c "npm ci --no-audit --no-fund && npm run dev:editor -- --host 0.0.0.0"
+    command: sh -c "npm ci --no-audit --no-fund && npm run dev -- --host 0.0.0.0"
     env_file:
       - path: .env
         required: false
@@ -33,15 +30,3 @@ services:
       - /app/node_modules # the container's own deps, not the host's
     ports:
       - "${DEV_PORT:-5173}:5173"
-
-  # One-shot: creates the blok types, uploads the photos and fills the home page in the Storyblok space.
-  storyblok-setup:
-    profiles: [setup]
-    image: node:22-alpine
-    working_dir: /app
-    entrypoint: ["node", "scripts/storyblok-setup.mjs"]
-    env_file:
-      - path: .env
-        required: false
-    volumes:
-      - .:/app:ro

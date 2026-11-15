@@ -55,7 +55,7 @@ const lashes = [0.2, 0.32, 0.44, 0.56, 0.68, 0.8].map((t) => {
 </script>
 
 <template>
-  <div v-draw v-editable="blok" class="divider" aria-hidden="true">
+  <div v-draw class="divider" aria-hidden="true">
     <svg :viewBox="`0 0 ${W} 90`" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
       <g v-for="mirror in [false, true]" :key="mirror" :transform="mirror ? `translate(${W} 0) scale(-1 1)` : undefined">
         <path :d="left.vine" stroke-width="1.6" />

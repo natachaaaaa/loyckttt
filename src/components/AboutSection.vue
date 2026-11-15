@@ -2,7 +2,7 @@
 import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
 import { gsap, splitLetters } from '../gsap'
 import OrnFrame from './ornaments/OrnFrame.vue'
-import { image } from '../storyblok'
+import { image } from '../content'
 
 const props = defineProps({ blok: Object })
 const portrait = computed(() => image(props.blok?.portrait, 700))
@@ -34,8 +34,8 @@ onBeforeUnmount(() => ctx?.revert())
 </script>
 
 <template>
-  <section ref="root" v-editable="blok" class="about" aria-labelledby="about-title">
-    <!-- key: a title edited in Storyblok re-creates the (letter-split) heading -->
+  <section ref="root" class="about" aria-labelledby="about-title">
+    <!-- key: a changed title re-creates the (letter-split) heading -->
     <h2 id="about-title" :key="blok.title" ref="title" class="section-title">{{ blok.title }}</h2>
     <div class="about__grid">
       <OrnFrame class="about__frame">
@@ -88,7 +88,7 @@ onBeforeUnmount(() => ctx?.revert())
   font-variant: small-caps;
   font-size: clamp(1.15rem, 1.9vw, 2.25rem);
   line-height: 1.1;
-  white-space: pre-line; /* keep the line breaks typed in Storyblok */
+  white-space: pre-line; /* keep the line breaks of home.json ("\n") */
 }
 
 /* Illuminated initial, in the marquee's metal face. */
