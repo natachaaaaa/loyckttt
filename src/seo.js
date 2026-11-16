@@ -151,6 +151,9 @@ export function headTags(path = '/') {
   return tags.join('\n    ')
 }
 
+/** Google Maps directions to the salon. */
+export const salonMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${salon.name}, ${salonAddress}`)}`
+
 /** Salon phone for display ("05 81 43 43 21") and for tel: links ("+33581434321"). */
 export const salonPhone = salon.phone
   ? { display: salon.phone.replace(/^\+33\s?/, '0'), href: `tel:${salon.phone.replace(/\s/g, '')}` }

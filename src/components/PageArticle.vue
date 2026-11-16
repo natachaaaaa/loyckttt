@@ -5,15 +5,13 @@ import FlashSection from './FlashSection.vue'
 import FaqSection from './FaqSection.vue'
 import GuideLinks from './GuideLinks.vue'
 import OrnDivider from './ornaments/OrnDivider.vue'
-import OrnFrame from './ornaments/OrnFrame.vue'
 import OrnSigil from './ornaments/OrnSigil.vue'
 import { homeSection, worksByFile } from '../content'
-import { salon, salonAddress, salonPhone } from '../seo'
+import { salon, salonAddress, salonPhone, salonMapsUrl } from '../seo'
 
 // One content page of src/content/pages.json. Gallery, flashes and FAQ reuse the home sections.
 const props = defineProps({ page: { type: Object, required: true } })
 const p = props.page
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${salon.name}, ${salonAddress}`)}`
 const flashes = homeSection('flashes')
 const faq = p.faq?.length && {
   kicker: 'Questions',
@@ -58,7 +56,7 @@ const faq = p.faq?.length && {
             {{ salonAddress }}<br />
             <a v-if="salonPhone" :href="salonPhone.href">{{ salonPhone.display }}</a>
             <template v-if="salonPhone"> · </template>
-            <a :href="mapsUrl" target="_blank" rel="noopener">Itinéraire</a>
+            <a :href="salonMapsUrl" target="_blank" rel="noopener">Itinéraire</a>
           </address>
         </div>
       </section>
@@ -66,13 +64,6 @@ const faq = p.faq?.length && {
 
     <FaqSection v-if="faq" :blok="faq" />
 
-    <section class="section page__cta" aria-labelledby="cta-title">
-      <OrnFrame class="page__cta-frame">
-        <h2 id="cta-title" class="section-title">Un projet ?</h2>
-        <p class="body-text">Choisis un créneau libre et décris ton idée : la séance a lieu à {{ salon.city }}, au salon {{ salon.name }}.</p>
-        <a class="page__cta-link" href="/#contact">Prendre rendez-vous</a>
-      </OrnFrame>
-    </section>
 
     <GuideLinks v-if="p.related?.length" :blok="{ title: 'À lire aussi', slugs: p.related }" />
   </article>
@@ -177,36 +168,5 @@ const faq = p.faq?.length && {
 .page__salon a {
   color: var(--bone);
   text-underline-offset: 0.2em;
-}
-
-.page__cta-frame {
-  max-width: 900px;
-  margin-inline: auto;
-  padding: clamp(2rem, 5vw, 4rem);
-}
-
-.page__cta-frame .body-text {
-  max-width: 50ch;
-  margin-top: 1.25rem;
-  color: var(--muted);
-}
-
-.page__cta-link {
-  display: inline-block;
-  margin-top: 2rem;
-  font-family: var(--font-metal);
-  font-size: clamp(1.4rem, 2.4vw, 2rem);
-  text-decoration: none;
-  color: var(--ink);
-  background: var(--bone);
-  padding: 0.3em 0.9em;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-}
-
-.page__cta-link:hover,
-.page__cta-link:focus-visible {
-  background: var(--ink);
-  color: var(--bone);
-  box-shadow: inset 0 0 0 1px var(--bone);
 }
 </style>

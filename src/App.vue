@@ -15,7 +15,7 @@ const page = findPage(props.path)
     <!-- Each section of home.json renders the component registered under its "component" name (app.js). -->
     <component :is="blok.component" v-for="blok in sections" v-else :key="blok._uid" :blok="blok" />
   </main>
-  <TheFooter />
+  <TheFooter :cta="Boolean(page)" />
 </template>
 
 <style>

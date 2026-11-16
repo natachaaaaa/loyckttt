@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   "src/App.vue": {
-    "mtime": 1794825253.4106367,
-    "seen": 1794825406.90814,
-    "ast_hash": "53c3fb410e427d24a01018a4d7981589",
+    "mtime": 1794825494.124267,
+    "seen": 1794825645.062131,
+    "ast_hash": "0011bea91bed790b22bb377e5d3d8d31",
     "semantic_hash": ""
   },
   "src/components/AboutSection.vue": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "src/components/TheFooter.vue": {
-    "mtime": 1794825253.411464,
-    "seen": 1794825406.908155,
-    "ast_hash": "fd5d205c4417e6dd2dbab0b05267b810",
+    "mtime": 1794825569.76725,
+    "seen": 1794825645.0621629,
+    "ast_hash": "150fcdd39fbe9279a1e9307a942d6848",
     "semantic_hash": ""
   },
   "src/components/TheHero.vue": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "src/seo.js": {
-    "mtime": 1794825277.0198808,
-    "seen": 1794825406.908169,
-    "ast_hash": "0abbf2f14f09dfed89a0ff94b81cfc04",
+    "mtime": 1794825494.1222506,
+    "seen": 1794825645.0621939,
+    "ast_hash": "1f4dad44d72cf712e0cd2de324dc4905",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -366,9 +366,9 @@
     "semantic_hash": ""
   },
   "src/components/PageArticle.vue": {
-    "mtime": 1794825371.2461443,
-    "seen": 1794825406.908152,
-    "ast_hash": "040a8045f357c64f0fe594e98e3088cf",
+    "mtime": 1794825499.5019174,
+    "seen": 1794825645.062156,
+    "ast_hash": "5c80536da111e5ad8bd15c0dac6166fd",
     "semantic_hash": ""
   },
   "src/content/pages.json": {
