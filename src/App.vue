@@ -1,13 +1,19 @@
 <script setup>
 import TheFooter from './components/TheFooter.vue'
-import { sections } from './content'
+import PageArticle from './components/PageArticle.vue'
+import { sections, findPage } from './content'
+
+// URL path of the page to show: "/" (home) or "/<slug>/" (pages.json). Unknown paths show the home page.
+const props = defineProps({ path: { type: String, default: '/' } })
+const page = findPage(props.path)
 </script>
 
 <template>
-  <a class="book" href="#contact">Rendez-vous</a>
+  <a class="book" href="/#contact">Rendez-vous</a>
   <main>
-    <!-- Each section of home.json renders the component registered under its "component" name (main.js). -->
-    <component :is="blok.component" v-for="blok in sections" :key="blok._uid" :blok="blok" />
+    <PageArticle v-if="page" :page="page" />
+    <!-- Each section of home.json renders the component registered under its "component" name (app.js). -->
+    <component :is="blok.component" v-for="blok in sections" v-else :key="blok._uid" :blok="blok" />
   </main>
   <TheFooter />
 </template>

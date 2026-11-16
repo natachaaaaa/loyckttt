@@ -3,6 +3,7 @@
 // Empty fields are left out: structured data must only state what is true.
 import business from './content/business.json'
 import home from './content/home.json'
+import { findPage } from './content'
 
 const { artist, salon, areaServed } = business
 export const siteUrl = (business.siteUrl || '').replace(/\/$/, '')
@@ -31,11 +32,37 @@ function clean(value) {
 }
 
 const abs = (path) => (siteUrl ? `${siteUrl}${path}` : undefined)
-const faq = home.sections.find((s) => s.component === 'faq')
+const homeFaq = home.sections.find((s) => s.component === 'faq')
 
-export function jsonLd() {
+const faqPage = (items) =>
+  items?.length && {
+    '@type': 'FAQPage',
+    mainEntity: items.map((it) => ({
+      '@type': 'Question',
+      name: it.question,
+      acceptedAnswer: { '@type': 'Answer', text: it.answer },
+    })),
+  }
+
+/** Title, description and path of a page of pages.json, or of the home page. */
+export function pageMeta(path) {
+  const page = findPage(path)
+  if (!page) return { path: '/', page: null }
+  return {
+    path: `/${page.slug}/`,
+    page,
+    title: page.title,
+    description: page.description,
+    ogTitle: `${page.h1} — ${artist.name}, tatoueur à ${salon.city}`,
+  }
+}
+
+/** schema.org graph: the artist and the salon on every page, plus the page itself, its breadcrumb and FAQ. */
+export function jsonLd(path = '/') {
+  const { path: url, page } = pageMeta(path)
   const salonId = abs('/#salon') || '#salon'
   const artistId = abs('/#loyck') || '#loyck'
+  const websiteId = abs('/#website') || '#website'
   const graph = [
     {
       '@type': 'Person',
@@ -71,33 +98,52 @@ export function jsonLd() {
     },
     {
       '@type': 'WebSite',
-      '@id': abs('/#website'),
+      '@id': websiteId,
       name: `${artist.name} — Tatoueur à ${salon.city}`,
       url: abs('/'),
       inLanguage: 'fr-FR',
       about: { '@id': artistId },
     },
-    faq && {
-      '@type': 'FAQPage',
-      mainEntity: faq.items.map((it) => ({
-        '@type': 'Question',
-        name: it.question,
-        acceptedAnswer: { '@type': 'Answer', text: it.answer },
-      })),
-    },
   ]
+  if (page) {
+    graph.push(
+      {
+        '@type': 'WebPage',
+        '@id': abs(`${url}#webpage`),
+        url: abs(url),
+        name: page.title,
+        description: page.description,
+        inLanguage: 'fr-FR',
+        isPartOf: { '@id': websiteId },
+        about: { '@id': artistId },
+        breadcrumb: { '@id': abs(`${url}#breadcrumb`) },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': abs(`${url}#breadcrumb`),
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Accueil', item: abs('/') },
+          { '@type': 'ListItem', position: 2, name: page.h1, item: abs(url) },
+        ],
+      },
+      faqPage(page.faq),
+    )
+  } else {
+    graph.push(faqPage(homeFaq?.items))
+  }
   return clean({ '@context': 'https://schema.org', '@graph': graph.filter(Boolean) })
 }
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
 
-/** Tags injected before </head> by the prerender. */
-export function headTags() {
-  const tags = [`<script type="application/ld+json">${JSON.stringify(jsonLd()).replace(/</g, '\\u003c')}</script>`]
+/** Tags injected before </head> by the prerender, for the page at `path`. */
+export function headTags(path = '/') {
+  const { path: url } = pageMeta(path)
+  const tags = [`<script type="application/ld+json">${JSON.stringify(jsonLd(path)).replace(/</g, '\\u003c')}</script>`]
   if (siteUrl) {
     tags.push(
-      `<link rel="canonical" href="${esc(abs('/'))}" />`,
-      `<meta property="og:url" content="${esc(abs('/'))}" />`,
+      `<link rel="canonical" href="${esc(abs(url))}" />`,
+      `<meta property="og:url" content="${esc(abs(url))}" />`,
       `<meta property="og:image" content="${esc(abs('/og-image.jpg'))}" />`,
       `<meta name="twitter:image" content="${esc(abs('/og-image.jpg'))}" />`,
     )

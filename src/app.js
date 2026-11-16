@@ -13,6 +13,7 @@ import AgendaSection from './components/AgendaSection.vue'
 import InfosSection from './components/InfosSection.vue'
 import FaqSection from './components/FaqSection.vue'
 import ContactSection from './components/ContactSection.vue'
+import GuideLinks from './components/GuideLinks.vue'
 
 // Section types: the "component" value of each entry in src/content/home.json.
 const sections = {
@@ -26,12 +27,13 @@ const sections = {
   agenda: AgendaSection,
   infos: InfosSection,
   faq: FaqSection,
+  guides: GuideLinks,
   contact: ContactSection,
 }
 
-/** ssr: true when rendering on the server or hydrating prerendered HTML. */
-export function createApp(ssr) {
-  const app = (ssr ? createSSRApp : createClientApp)(App)
+/** ssr: true when rendering on the server or hydrating prerendered HTML. path: URL path of the page. */
+export function createApp(ssr, path) {
+  const app = (ssr ? createSSRApp : createClientApp)(App, { path })
     .directive('draw', vDraw)
     .directive('reveal', vReveal)
     .directive('stagger', vStagger)

@@ -1,0 +1,448 @@
+{
+  "_comment": "Pages de contenu (une URL chacune : /<slug>/). Champs d'une section : heading, paragraphs (liste), list (puces, facultatif), works (fichiers de public/works, facultatif), salon: true (adresse du salon depuis business.json), flashes: true (les flashs de home.json). faq et related (slugs) sont facultatifs. Ne rien affirmer d'inexact : prix, durées et règles du salon sont à valider.",
+  "pages": [
+    {
+      "slug": "tatouage-blackwork-castres",
+      "title": "Tatouage blackwork à Castres · Loyck, tatoueur (Tarn)",
+      "description": "Tatouage blackwork à Castres : aplats noirs, contours épais, formes organiques qui suivent le corps. Pièces uniques par Loyck, au salon Tigroo Tattoo Piercing.",
+      "kicker": "Style",
+      "h1": "Tatouage blackwork à Castres",
+      "intro": "Le blackwork, c'est le tatouage pensé en noir uniquement : des aplats profonds, des contours affirmés, et le contraste de la peau comme seule lumière. C'est le cœur du travail de Loyck, au salon Tigroo Tattoo Piercing à Castres.",
+      "sections": [
+        {
+          "heading": "Qu'est-ce que le blackwork ?",
+          "paragraphs": [
+            "Le blackwork n'utilise que l'encre noire. Pas de dégradé de couleur, pas de remplissage décoratif : la pièce tient par la composition, les masses sombres et les vides laissés à la peau.",
+            "Chez Loyck, le blackwork se mélange à la biomécanique et à l'illustration horrifique : des formes qui poussent comme des organismes, racines, épines, filaments, et qui s'enroulent autour du membre."
+          ]
+        },
+        {
+          "heading": "Une pièce dessinée pour le corps",
+          "paragraphs": [
+            "Un tatouage blackwork se lit de loin. C'est pour ça que la composition suit les muscles et les courbes : avant-bras, mollet, cuisse, épaule. Le dessin est construit pour l'emplacement choisi, pas posé dessus après coup."
+          ],
+          "list": [
+            "Traits continus, épais sur les contours et très fins dans les détails",
+            "Aplats noirs pour les zones d'ombre et de contraste",
+            "Hachures et pointillés pour les textures",
+            "Motifs : yeux, insectes, sceaux, lunes, fleurs noires"
+          ]
+        },
+        {
+          "heading": "Quelques pièces blackwork",
+          "paragraphs": ["Des tatouages réalisés à Castres, en noir uniquement."],
+          "works": ["crane.jpg", "yeux.jpg", "ronces.jpg", "epines.jpg"]
+        },
+        {
+          "heading": "Le blackwork vieillit-il bien ?",
+          "paragraphs": [
+            "Un noir posé avec soin reste lisible dans le temps : c'est l'une des raisons pour lesquelles le blackwork est apprécié. Les détails très fins demandent en revanche un peu d'espace pour respirer, ce qui se discute au moment du dessin. Les soins des premières semaines comptent aussi beaucoup."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Le blackwork fait-il plus mal qu'un autre tatouage ?",
+          "answer": "Les grandes zones remplies de noir demandent plus de passages, donc des séances parfois plus longues. La sensation dépend surtout de l'emplacement : les zones osseuses sont en général plus sensibles."
+        },
+        {
+          "question": "Peut-on recouvrir un ancien tatouage avec du blackwork ?",
+          "answer": "Le noir permet parfois de couvrir un ancien motif, mais tout dépend de sa taille, de sa couleur et de son état. Ça se voit au cas par cas, en envoyant une photo avec ta demande."
+        }
+      ],
+      "related": ["tatouage-dotwork-castres", "tatouage-cybersigilism", "tatouage-sur-mesure-castres"]
+    },
+    {
+      "slug": "tatouage-dotwork-castres",
+      "title": "Tatouage dotwork à Castres · Loyck, tatoueur (Tarn)",
+      "description": "Tatouage dotwork à Castres : ombres et textures faites point par point, à l'encre noire. Pièces uniques par Loyck au salon Tigroo Tattoo Piercing.",
+      "kicker": "Style",
+      "h1": "Tatouage dotwork à Castres",
+      "intro": "Le dotwork construit les ombres point par point. De loin, on voit un dégradé ; de près, une matière, presque une gravure. Loyck l'utilise pour donner du relief à ses pièces en noir, à Castres.",
+      "sections": [
+        {
+          "heading": "Le dotwork, une ombre faite de points",
+          "paragraphs": [
+            "Au lieu de remplir une zone d'un aplat, l'aiguille pose une multitude de points. Plus ils sont serrés, plus la zone est sombre. Le résultat est doux, granuleux, très différent d'un dégradé lissé.",
+            "C'est une technique lente et précise, qui donne du volume sans perdre la lisibilité du dessin."
+          ]
+        },
+        {
+          "heading": "Dotwork et blackwork ensemble",
+          "paragraphs": [
+            "Dans le travail de Loyck, le dotwork vient rarement seul : il complète les contours épais et les aplats du blackwork. Les traits dessinent la forme, les points lui donnent sa texture, sur une carapace d'insecte, une peau, une fumée."
+          ]
+        },
+        {
+          "heading": "Des pièces en dotwork",
+          "paragraphs": ["Ombres et textures en pointillés, réalisées à Castres."],
+          "works": ["larve.jpg", "spectre.jpg", "ange.jpg"]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Le dotwork est-il plus long à réaliser ?",
+          "answer": "Souvent, oui : chaque zone d'ombre est construite point par point. La durée dépend de la taille et de la densité des textures, et se précise au moment du dessin."
+        },
+        {
+          "question": "Quels motifs conviennent au dotwork ?",
+          "answer": "Tout ce qui gagne à avoir une matière : insectes, chrysalides, peaux, fumées, astres. Il fonctionne aussi très bien en complément de traits épais."
+        }
+      ],
+      "related": ["tatouage-blackwork-castres", "tatouage-biomecanique", "flash-tatouage-castres"]
+    },
+    {
+      "slug": "tatouage-cybersigilism",
+      "title": "Tatouage cybersigilism · Loyck, tatoueur à Castres",
+      "description": "Tatouage cybersigilism : lignes tranchantes, symétries et épines inspirées des sceaux et de la culture cyberpunk. Pièces uniques par Loyck à Castres (Tarn).",
+      "kicker": "Style",
+      "h1": "Tatouage cybersigilism",
+      "intro": "Le cybersigilism mélange l'esthétique des sceaux occultes et celle de l'électronique sombre : des lignes fines et tranchantes, des symétries, des pointes qui s'étirent le long du corps. Loyck le pratique à Castres, en noir.",
+      "sections": [
+        {
+          "heading": "D'où vient le cybersigilism ?",
+          "paragraphs": [
+            "Le nom assemble « cyber » et « sigil », le sceau. Le style emprunte aux sceaux et aux symboles leur structure, et à la culture cyberpunk, à l'anime et à la musique industrielle leur nervosité : des formes acérées, presque mécaniques, mais organiques dans leur façon de pousser."
+          ]
+        },
+        {
+          "heading": "Des lignes qui épousent le corps",
+          "paragraphs": [
+            "Un cybersigil se pense rarement comme un motif posé à plat. Il suit l'axe d'un avant-bras, d'un mollet ou d'une colonne, s'élargit avec le muscle, s'affine vers les articulations. Le dessin est donc fait pour un emplacement précis."
+          ],
+          "list": [
+            "Symétries autour d'un axe ou d'un œil central",
+            "Pointes et épines qui prolongent le mouvement",
+            "Aplats noirs pour les masses, traits fins pour les extrémités"
+          ]
+        },
+        {
+          "heading": "Pièces cybersigilism",
+          "paragraphs": ["Sceaux, épines et ronces réalisés à Castres."],
+          "works": ["sceau.jpg", "epines.jpg", "ronces.jpg"]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Un cybersigil peut-il être petit ?",
+          "answer": "Il peut l'être, mais le style respire mieux sur une longueur : les pointes ont besoin de place pour s'étirer. La taille se décide avec l'emplacement, au moment du dessin."
+        }
+      ],
+      "related": ["tatouage-blackwork-castres", "tatouage-sur-mesure-castres", "flash-tatouage-castres"]
+    },
+    {
+      "slug": "tatouage-biomecanique",
+      "title": "Tatouage biomécanique et horrifique · Loyck, Castres",
+      "description": "Tatouage biomécanique et illustration horrifique à Castres : formes organiques, créatures, yeux, insectes, à l'encre noire. Le malaise vient de la forme, pas du gore.",
+      "kicker": "Style",
+      "h1": "Tatouage biomécanique et illustration horrifique",
+      "intro": "Des formes qui semblent vivantes sous la peau, des yeux qui s'ouvrent dans les motifs, des créatures et des corps qui se transforment : c'est la part la plus personnelle du travail de Loyck, à Castres.",
+      "sections": [
+        {
+          "heading": "Le vivant et la machine",
+          "paragraphs": [
+            "La biomécanique mêle l'organique et le mécanique : tendons, tiges, carapaces, filaments, comme si le tatouage faisait partie de l'anatomie. Chez Loyck, ces formes poussent et se ramifient pour envelopper le membre."
+          ]
+        },
+        {
+          "heading": "L'horreur par la forme",
+          "paragraphs": [
+            "L'illustration horrifique de Loyck cherche le malaise plutôt que le sang : un visage déformé, trop de dents, un œil de trop. L'inquiétude vient du dessin, de la nuit et du rêve, pas d'une accumulation de détails gores."
+          ],
+          "list": [
+            "Yeux, parfois multiples",
+            "Insectes, larves, chrysalides",
+            "Visages déformés et créatures",
+            "Fleurs noires et lunes en contrepoint"
+          ]
+        },
+        {
+          "heading": "Pièces biomécaniques et horrifiques",
+          "paragraphs": ["Créatures, larves et figures réalisées à Castres."],
+          "works": ["ver.jpg", "crane.jpg", "larve.jpg", "ange.jpg"]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Peut-on adapter un univers (film, anime, musique) ?",
+          "answer": "Oui : beaucoup d'idées partent d'une référence, d'un album ou d'un univers. Le dessin final reste une création, pensée pour toi et pour l'emplacement."
+        }
+      ],
+      "related": ["tatouage-blackwork-castres", "tatouage-dotwork-castres", "tatouage-sur-mesure-castres"]
+    },
+    {
+      "slug": "flash-tatouage-castres",
+      "title": "Flashs tatouage à Castres · Pièces uniques · Loyck",
+      "description": "Flashs tatouage disponibles à Castres : des dessins prêts, tatoués une seule fois. Blackwork, dotwork, cybersigilism par Loyck au salon Tigroo Tattoo Piercing.",
+      "kicker": "Pièces uniques",
+      "h1": "Flashs tatouage à Castres",
+      "intro": "Un flash est un dessin déjà prêt. Ceux de Loyck ne sont tatoués qu'une seule fois : une fois réservé, il disparaît. C'est souvent la façon la plus simple de porter une pièce de son univers.",
+      "sections": [
+        {
+          "heading": "Les flashs disponibles",
+          "paragraphs": ["Les flashs marqués « Réservé » ont déjà trouvé leur peau."],
+          "flashes": true
+        },
+        {
+          "heading": "Comment réserver un flash ?",
+          "paragraphs": [
+            "Choisis un créneau dans le calendrier de rendez-vous et indique le nom du flash dans ta demande. La taille et l'emplacement s'ajustent ensemble avant la séance, pour que le dessin tombe juste sur ton corps."
+          ]
+        },
+        {
+          "heading": "Flash ou sur mesure ?",
+          "paragraphs": [
+            "Le flash est prêt, le délai est plus court et tu vois exactement le dessin avant de réserver. Le sur-mesure part de ton idée et prend le temps d'un dessin dédié. Les deux sont dessinés par Loyck, dans le même style."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Un flash peut-il être modifié ?",
+          "answer": "La taille et l'emplacement s'adaptent. Pour des changements plus profonds, mieux vaut partir sur une demande sur mesure."
+        }
+      ],
+      "related": ["tatouage-sur-mesure-castres", "prix-tatouage-castres", "premier-tatouage"]
+    },
+    {
+      "slug": "tatouage-sur-mesure-castres",
+      "title": "Tatouage sur mesure à Castres · Loyck, tatoueur",
+      "description": "Tatouage sur mesure à Castres : de ton idée à un dessin unique, pensé pour ton corps. Demande, dessin, acompte, séance : comment ça se passe avec Loyck.",
+      "kicker": "Projet",
+      "h1": "Tatouage sur mesure à Castres",
+      "intro": "Un tatouage sur mesure part de ton idée, d'une référence, d'un morceau de musique ou d'un souvenir, et devient un dessin unique, construit pour un emplacement précis. Voici comment ça se passe avec Loyck, à Castres.",
+      "sections": [
+        {
+          "heading": "1. La demande",
+          "paragraphs": [
+            "Tu choisis un créneau dans le calendrier et tu décris ton projet. Plus la demande est précise, plus le dessin sera juste :"
+          ],
+          "list": [
+            "L'idée, en quelques phrases",
+            "L'emplacement sur le corps",
+            "La taille approximative",
+            "Des références : images, comptes, univers",
+            "Le morceau qui va avec, si tu en as un"
+          ]
+        },
+        {
+          "heading": "2. Le dessin",
+          "paragraphs": [
+            "Loyck dessine une pièce unique, pensée pour suivre les lignes et les muscles du corps. Un même motif ne se dessine pas de la même façon pour un avant-bras et pour un mollet."
+          ]
+        },
+        {
+          "heading": "3. L'acompte et la séance",
+          "paragraphs": [
+            "Un acompte confirme le rendez-vous ; il est déduit du prix final. Le jour de la séance, viens reposé·e, après avoir mangé, avec une peau hydratée et sans coup de soleil."
+          ]
+        },
+        {
+          "heading": "Des projets sur mesure",
+          "paragraphs": ["Chaque pièce ci-dessous a été dessinée pour une personne et un emplacement."],
+          "works": ["yeux.jpg", "ronces.jpg", "ver.jpg"]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Combien de temps faut-il pour avoir un rendez-vous ?",
+          "answer": "Ça dépend de l'agenda : les créneaux libres sont visibles directement dans le calendrier de rendez-vous."
+        },
+        {
+          "question": "Peut-on voir le dessin avant la séance ?",
+          "answer": "Le dessin est échangé et ajusté avec toi avant de tatouer, notamment pour la taille et le placement."
+        }
+      ],
+      "related": ["premier-tatouage", "prix-tatouage-castres", "flash-tatouage-castres"]
+    },
+    {
+      "slug": "premier-tatouage",
+      "title": "Premier tatouage : préparation, douleur, déroulé · Loyck",
+      "description": "Premier tatouage : comment choisir son motif et son emplacement, se préparer, gérer la douleur et prendre soin de sa peau. Le guide de Loyck, tatoueur à Castres.",
+      "kicker": "Guide",
+      "h1": "Premier tatouage : le guide",
+      "intro": "Un premier tatouage soulève toujours les mêmes questions : quel motif, quel emplacement, est-ce que ça fait mal, comment se préparer. Ce guide reprend ce qu'il faut savoir avant de se lancer.",
+      "sections": [
+        {
+          "heading": "Choisir le motif",
+          "paragraphs": [
+            "Le plus important est que le dessin te ressemble. Partir d'un style que tu aimes, d'un univers, d'une image forte aide beaucoup. Un tatoueur dessine dans son propre style : regarder ses réalisations est le meilleur moyen de savoir si ça te correspond."
+          ]
+        },
+        {
+          "heading": "Choisir l'emplacement",
+          "paragraphs": [
+            "L'emplacement change tout : la taille possible, la lisibilité, la visibilité au quotidien, et la sensation pendant la séance. Avant-bras, mollet et cuisse sont des emplacements fréquents pour un premier tatouage : la peau y est souple et la surface permet un vrai dessin."
+          ]
+        },
+        {
+          "heading": "Est-ce que ça fait mal ?",
+          "paragraphs": [
+            "Oui, un peu, mais la sensation est variable selon les personnes et surtout selon la zone. Les endroits proches de l'os (côtes, chevilles, sternum, coudes) sont en général plus sensibles que les zones charnues. Une bonne nuit de sommeil et un repas avant la séance aident vraiment."
+          ]
+        },
+        {
+          "heading": "Bien se préparer",
+          "list": [
+            "Dormir correctement la veille",
+            "Manger avant la séance et s'hydrater",
+            "Éviter l'alcool la veille et le jour même",
+            "Arriver avec une peau hydratée, sans coup de soleil ni irritation",
+            "Porter un vêtement qui laisse la zone accessible"
+          ],
+          "paragraphs": []
+        },
+        {
+          "heading": "Et pour un·e mineur·e ?",
+          "paragraphs": [
+            "En France, tatouer une personne mineure nécessite le consentement écrit d'une personne titulaire de l'autorité parentale. Renseigne-toi auprès du salon avant toute demande."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Combien de temps dure une séance ?",
+          "answer": "De moins d'une heure pour une petite pièce à une journée complète pour un grand projet. La durée se précise avec le dessin."
+        },
+        {
+          "question": "Que faire après la séance ?",
+          "answer": "Suivre la fiche de soins remise au salon. L'essentiel est résumé sur la page « Soins après un tatouage »."
+        }
+      ],
+      "related": ["soins-tatouage", "prix-tatouage-castres", "tatouage-sur-mesure-castres"]
+    },
+    {
+      "slug": "soins-tatouage",
+      "title": "Soins après un tatouage : cicatrisation, crème, soleil · Loyck",
+      "description": "Soins après un tatouage : nettoyage, crème, soleil, bain et piscine. Les étapes de la cicatrisation et les signes qui doivent alerter. Par Loyck, tatoueur à Castres.",
+      "kicker": "Guide",
+      "h1": "Soins après un tatouage",
+      "intro": "Un tatouage est une plaie le temps de cicatriser. Les premières semaines décident de son rendu pour des années. Voici les gestes essentiels ; la fiche de soins remise au salon après chaque séance reste la référence.",
+      "sections": [
+        {
+          "heading": "Les premiers jours",
+          "list": [
+            "Garder le film ou le pansement le temps indiqué au salon",
+            "Laver avec de l'eau tiède et un savon neutre, sans frotter",
+            "Sécher en tamponnant avec un essuie-tout propre",
+            "Appliquer une crème en couche fine, sans en remettre trop"
+          ],
+          "paragraphs": ["Les mains doivent toujours être propres avant de toucher le tatouage."]
+        },
+        {
+          "heading": "Les deux à trois semaines suivantes",
+          "paragraphs": [
+            "La peau pèle et démange : c'est normal. Il ne faut pas gratter ni arracher les petites peaux, au risque d'emporter de l'encre. Continuer la crème en couche fine, environ deux semaines."
+          ],
+          "list": [
+            "Pas de soleil direct sur le tatouage",
+            "Pas de bain, de piscine, de mer ni de sauna pendant environ trois semaines",
+            "Des vêtements amples qui ne frottent pas sur la zone"
+          ]
+        },
+        {
+          "heading": "Sur le long terme",
+          "paragraphs": [
+            "Le soleil est le premier ennemi d'un tatouage noir : une protection solaire sur la zone, une fois cicatrisée, garde les contours nets plus longtemps."
+          ]
+        },
+        {
+          "heading": "Quand consulter ?",
+          "paragraphs": [
+            "Une rougeur qui s'étend, une chaleur ou une douleur qui augmente après les premiers jours, un écoulement ou de la fièvre ne sont pas normaux : consulte un médecin, et préviens le salon."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Quelle crème utiliser ?",
+          "answer": "Celle conseillée sur la fiche de soins du salon. L'important est d'en mettre une couche fine : trop de crème empêche la peau de respirer."
+        },
+        {
+          "question": "Combien de temps dure la cicatrisation ?",
+          "answer": "La surface cicatrise en deux à trois semaines en général ; la peau finit de se reconstruire en profondeur sur environ un mois."
+        }
+      ],
+      "related": ["premier-tatouage", "tatouage-sur-mesure-castres", "salon-tatouage-castres"]
+    },
+    {
+      "slug": "prix-tatouage-castres",
+      "title": "Prix d'un tatouage à Castres : comment il est calculé · Loyck",
+      "description": "Prix d'un tatouage à Castres : taille, emplacement, niveau de détail, temps de dessin. Devis, acompte, flash ou sur mesure : comment Loyck établit un tarif.",
+      "kicker": "Tarifs",
+      "h1": "Prix d'un tatouage à Castres",
+      "intro": "Il n'existe pas de prix au centimètre carré : un tatouage se chiffre selon ce qu'il demande vraiment. Voici ce qui fait varier le prix, et comment se passe le devis avec Loyck.",
+      "sections": [
+        {
+          "heading": "Ce qui fait varier le prix",
+          "list": [
+            "La taille de la pièce",
+            "L'emplacement : certaines zones demandent plus de temps et de précision",
+            "Le niveau de détail : aplats, traits fins, dotwork",
+            "Le temps de dessin pour une pièce sur mesure"
+          ],
+          "paragraphs": []
+        },
+        {
+          "heading": "Le devis",
+          "paragraphs": [
+            "Le prix est établi sur devis, après échange sur le projet : idée, emplacement, taille. Tu sais donc ce que tu paies avant de réserver. Les tarifs de base sont indiqués dans les infos pratiques de la page d'accueil."
+          ]
+        },
+        {
+          "heading": "L'acompte",
+          "paragraphs": [
+            "Un acompte confirme le rendez-vous. Il est déduit du prix final : ce n'est pas un supplément, c'est une partie du prix versée à l'avance pour bloquer le créneau et le temps de dessin."
+          ]
+        },
+        {
+          "heading": "Flash ou sur mesure",
+          "paragraphs": [
+            "Un flash est déjà dessiné : son prix dépend surtout de la taille finale. Une pièce sur mesure inclut le temps de création du dessin."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Peut-on payer en plusieurs fois ?",
+          "answer": "Pour un grand projet réalisé en plusieurs séances, le paiement se fait en général séance par séance. Le détail se voit au moment du devis."
+        }
+      ],
+      "related": ["tatouage-sur-mesure-castres", "flash-tatouage-castres", "premier-tatouage"]
+    },
+    {
+      "slug": "salon-tatouage-castres",
+      "title": "Salon de tatouage à Castres · Tigroo Tattoo Piercing · Loyck",
+      "description": "Loyck tatoue au salon Tigroo Tattoo Piercing à Castres (Tarn). Adresse, rendez-vous, accès depuis Mazamet, Albi, Lavaur, Revel et Toulouse.",
+      "kicker": "Le salon",
+      "h1": "Salon de tatouage à Castres",
+      "intro": "Loyck tatoue au salon Tigroo Tattoo Piercing, à Castres, dans le Tarn. Les séances ont lieu uniquement sur rendez-vous, pris en ligne.",
+      "sections": [
+        {
+          "heading": "Adresse",
+          "paragraphs": [],
+          "salon": true
+        },
+        {
+          "heading": "Sur rendez-vous uniquement",
+          "paragraphs": [
+            "Les créneaux libres sont visibles dans le calendrier de la page d'accueil. Tu choisis un créneau, tu décris ton projet, et le rendez-vous est confirmé après échange et versement d'un acompte."
+          ]
+        },
+        {
+          "heading": "Venir depuis le Tarn et l'Occitanie",
+          "paragraphs": [
+            "Castres est au sud du Tarn. Les demandes sont ouvertes depuis tout le département et au-delà : Mazamet, Albi, Lavaur, Graulhet, Revel, Toulouse. Pour un projet long, une journée complète évite de multiplier les trajets."
+          ]
+        }
+      ],
+      "faq": [
+        {
+          "question": "Le salon fait-il aussi du piercing ?",
+          "answer": "Tigroo Tattoo Piercing propose du piercing ; pour ces prestations, contacte directement le salon. Loyck, lui, réalise les tatouages."
+        }
+      ],
+      "related": ["tatouage-blackwork-castres", "prix-tatouage-castres", "premier-tatouage"]
+    }
+  ]
+}

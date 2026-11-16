@@ -14,7 +14,7 @@ Copier `.env.example` en `.env` (facultatif : sans réglage, le site tourne avec
 
 Après toute modification (contenu ou `.env`), reconstruire : `docker compose up -d --build`.
 
-- Checks: `node scripts/check-booking.mjs`.
+- Checks: `node scripts/check-booking.mjs`, et après un build `node scripts/check-pages.mjs` (liens, photos, titres uniques, un h1, canoniques).
 - `npm run build` pré-génère le HTML complet de la page (`scripts/prerender.mjs`) : les moteurs de recherche
   lisent tout le contenu sans exécuter de JavaScript.
 
@@ -61,6 +61,22 @@ Chaque `_uid` doit rester unique (n'importe quel texte).
 
 **Dates de l'agenda** : une date passée disparaît toute seule du site ; la phase de lune est calculée.
 
+### Pages de contenu : `src/content/pages.json`
+
+Une page par entrée, à l'adresse `/<slug>/` (styles, flashs, sur mesure, premier tatouage, soins, prix, salon).
+Elles sont listées dans le pied de page de tout le site et dans le bloc « Styles & conseils » de l'accueil.
+
+| Champ | Rôle |
+|---|---|
+| `slug` | Adresse de la page : minuscules et tirets, ne plus la changer une fois en ligne |
+| `title`, `description` | Titre (≤ 60–70 caractères) et description (≈ 150) dans Google |
+| `kicker`, `h1`, `intro` | Surtitre, titre de la page, chapeau |
+| `sections` | `heading` + `paragraphs` (+ `list` en puces). `works` : photos de la galerie (`["crane.jpg"]`). `salon: true` : adresse du salon. `flashes: true` : les flashs de l'accueil |
+| `faq` | Questions / réponses de la page (aussi en données structurées) |
+| `related` | Slugs des pages proposées en bas (« À lire aussi ») |
+
+Chaque page doit rester utile en elle-même : pas de page par ville avec le même texte, Google les pénalise.
+
 ## Référencement : « tatoueur Castres »
 
 ### Ce que fait le site
@@ -71,6 +87,8 @@ Chaque `_uid` doit rester unique (n'importe quel texte).
   géolocalisation Castres (FR-81), favicon et icône.
 - **Données structurées** (JSON-LD, `src/seo.js`) : Loyck (`Person`) qui travaille au salon
   (`TattooParlor` Tigroo Tattoo Piercing, avec adresse), le site (`WebSite`) et la FAQ (`FAQPage`).
+- **10 pages de contenu** (styles, flashs, sur mesure, premier tatouage, soins, prix, salon), chacune avec son
+  titre, sa description, sa canonique, son fil d'Ariane et sa FAQ en données structurées, reliées entre elles.
 - **Contenu** : bio, sous-titres, FAQ locale (Castres, Tarn, Albi, Mazamet, Toulouse…), textes alternatifs
   des photos, nom/adresse/téléphone du salon dans les infos pratiques et le pied de page.
 - **Vitesse** : image du logo en WebP adaptée à l'écran (LCP), widget de RDV chargé côté navigateur.

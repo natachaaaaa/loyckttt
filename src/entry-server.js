@@ -2,8 +2,9 @@
 import { renderToString } from 'vue/server-renderer'
 import { createApp } from './app'
 
-export { headTags } from './seo'
+export { headTags, pageMeta } from './seo'
+export { pages, pageUrl } from './content'
 
-export function render() {
-  return renderToString(createApp(true))
+export function render(path) {
+  return renderToString(createApp(true, path))
 }

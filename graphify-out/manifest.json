@@ -1,8 +1,8 @@
 {
   ".claude/launch.json": {
-    "mtime": 1794730005.2456193,
-    "seen": 1794730188.767543,
-    "ast_hash": "578971a150f4ea52a5e17a6f3ae2c3cc",
+    "mtime": 1794825331.900542,
+    "seen": 1794825406.9081259,
+    "ast_hash": "fb4cd1894b8b0030484a72447ea69f0c",
     "semantic_hash": ""
   },
   ".vscode/extensions.json": {
@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   "src/App.vue": {
-    "mtime": 1794735221.7446516,
-    "seen": 1794735235.359794,
-    "ast_hash": "26a57116d61fab96e9f74a8b652f8ecf",
+    "mtime": 1794825253.4106367,
+    "seen": 1794825406.90814,
+    "ast_hash": "53c3fb410e427d24a01018a4d7981589",
     "semantic_hash": ""
   },
   "src/components/AboutSection.vue": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "src/components/TheFooter.vue": {
-    "mtime": 1794735533.4758081,
-    "seen": 1794735833.135683,
-    "ast_hash": "4a7abe2c884b31154753ac2d2935db56",
+    "mtime": 1794825253.411464,
+    "seen": 1794825406.908155,
+    "ast_hash": "fd5d205c4417e6dd2dbab0b05267b810",
     "semantic_hash": ""
   },
   "src/components/TheHero.vue": {
@@ -66,9 +66,9 @@
     "semantic_hash": ""
   },
   "src/main.js": {
-    "mtime": 1794735393.8171177,
-    "seen": 1794735833.135697,
-    "ast_hash": "702b27608f072f337ba61a62958fb4f7",
+    "mtime": 1794825253.410951,
+    "seen": 1794825406.908169,
+    "ast_hash": "42e03937f68f06bc45c515e160cdae6b",
     "semantic_hash": ""
   },
   "vite.config.js": {
@@ -78,9 +78,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1794735802.7467194,
-    "seen": 1794735833.1357,
-    "ast_hash": "9d14f0741672d1dc57291f149465e955",
+    "mtime": 1794825405.6844141,
+    "seen": 1794825406.9081721,
+    "ast_hash": "24a753207ee67e06ecb8184fa86d69cb",
     "semantic_hash": ""
   },
   "index.html": {
@@ -204,9 +204,9 @@
     "semantic_hash": ""
   },
   "src/content/home.json": {
-    "mtime": 1794735503.2344553,
-    "seen": 1794735833.135693,
-    "ast_hash": "66a05eb075e0cbc4ac0ee1c732fa5598",
+    "mtime": 1794825253.6426687,
+    "seen": 1794825406.9081652,
+    "ast_hash": "921b9f8cfe24cbe7c4f15c4a702a7b34",
     "semantic_hash": ""
   },
   "src/utils.js": {
@@ -276,15 +276,15 @@
     "semantic_hash": ""
   },
   "src/content.js": {
-    "mtime": 1794735221.7471514,
-    "seen": 1794735235.359811,
-    "ast_hash": "b5874b4cab101f8df4995da575b6445e",
+    "mtime": 1794825216.1928747,
+    "seen": 1794825406.908163,
+    "ast_hash": "0cef8e2ebcf63bcf9cbab28445dd4889",
     "semantic_hash": ""
   },
   "scripts/prerender.mjs": {
-    "mtime": 1794735551.8640494,
-    "seen": 1794735833.135666,
-    "ast_hash": "39c4daf09c54bb432bf2f8fbbe188be9",
+    "mtime": 1794825292.0622256,
+    "seen": 1794825406.9081368,
+    "ast_hash": "083a0cce91059b61e2975e9acd6d376a",
     "semantic_hash": ""
   },
   "scripts/render-logo.swift": {
@@ -294,9 +294,9 @@
     "semantic_hash": ""
   },
   "src/app.js": {
-    "mtime": 1794735392.5546112,
-    "seen": 1794735833.13567,
-    "ast_hash": "2b99a1262dc5d211a596ecd3bbe473f1",
+    "mtime": 1794825253.4108708,
+    "seen": 1794825406.9081411,
+    "ast_hash": "c395def4532d41fc56b5626532619007",
     "semantic_hash": ""
   },
   "src/components/ClientOnly.vue": {
@@ -318,15 +318,15 @@
     "semantic_hash": ""
   },
   "src/entry-server.js": {
-    "mtime": 1794735394.0362308,
-    "seen": 1794735833.1356952,
-    "ast_hash": "7df483d93461ac1814519fc6222cdf7a",
+    "mtime": 1794825253.4110267,
+    "seen": 1794825406.908167,
+    "ast_hash": "ee8c885ebd7efdca2901448a5bdbdf28",
     "semantic_hash": ""
   },
   "src/seo.js": {
-    "mtime": 1794735533.2625175,
-    "seen": 1794735833.135697,
-    "ast_hash": "10f21a8ca98a775360bdcf9b1be4061a",
+    "mtime": 1794825277.0198808,
+    "seen": 1794825406.908169,
+    "ast_hash": "0abbf2f14f09dfed89a0ff94b81cfc04",
     "semantic_hash": ""
   },
   "public/apple-touch-icon.png": {
@@ -351,6 +351,30 @@
     "mtime": 1794735656.077451,
     "seen": 1794735833.135715,
     "ast_hash": "df098eac0d25d5ce889c6f2fb4345050",
+    "semantic_hash": ""
+  },
+  "scripts/check-pages.mjs": {
+    "mtime": 1794825310.9278278,
+    "seen": 1794825406.908136,
+    "ast_hash": "fc1ddb189f5058d19fa1b1038780653b",
+    "semantic_hash": ""
+  },
+  "src/components/GuideLinks.vue": {
+    "mtime": 1794825216.335551,
+    "seen": 1794825406.90815,
+    "ast_hash": "0ca22aff8f8b37db4c82b59c12d9a8bc",
+    "semantic_hash": ""
+  },
+  "src/components/PageArticle.vue": {
+    "mtime": 1794825371.2461443,
+    "seen": 1794825406.908152,
+    "ast_hash": "040a8045f357c64f0fe594e98e3088cf",
+    "semantic_hash": ""
+  },
+  "src/content/pages.json": {
+    "mtime": 1794825178.01772,
+    "seen": 1794825406.9081652,
+    "ast_hash": "97f5959d2be062ed2b07d9b86439f7a1",
     "semantic_hash": ""
   }
 }

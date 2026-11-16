@@ -1,5 +1,5 @@
 {
-  "0": "WorksSection.vue",
+  "0": "PageArticle.vue",
   "1": "package.json",
   "2": "split-logo.mjs",
   "3": "vue",
@@ -8,6 +8,7 @@
   "6": "Prise de rendez-vous",
   "7": "OrnDivider.vue",
   "8": "WorksSection.vue",
-  "9": "ContactSection.vue",
-  "10": "AppKit"
+  "9": "check-pages.mjs",
+  "10": "AppKit",
+  "11": "WorkLightbox.vue"
 }
